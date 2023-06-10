@@ -16,19 +16,10 @@ const Hero = () => {
                     />
                 </div>
                 <div className="max-w-2xl pt-16">
-                    <div className="-sm:flex hidden sm:mb-8 sm:justify-center">
-                    <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                        Announcing our next round of funding.{" "}
-                        <a href="#" className="font-semibold text-indigo-600">
-                        <span className="absolute inset-0" aria-hidden="true" />
-                        Read more <span aria-hidden="true">&rarr;</span>
-                        </a>
-                    </div>
-                    </div>
 
                     <div className="">
-                    <h1 className="text-xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                        Modern website templates, crafted with Tailwind CSS.
+                    <h1 className="text-xl font-extrabold text-slate-900 tracking-tight sm:text-5xl">
+                        {'Alto Desempenho para Voar ainda Mais Rápido ✈️'}
                     </h1>
 
                     <div className="mt-4 flex flex-wrap">
@@ -37,9 +28,9 @@ const Hero = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-8 w-8 flex-none stroke-current text-slate-400"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                         >
                             <ellipse cx="16" cy="16" rx="13" ry="5"></ellipse>
                             <ellipse
@@ -63,9 +54,9 @@ const Hero = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-8 w-8 flex-none stroke-current text-slate-400"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                         >
                             <defs>
                             <linearGradient
@@ -76,11 +67,11 @@ const Hero = () => {
                                 y2="27.375"
                                 gradientUnits="userSpaceOnUse"
                             >
-                                <stop offset=".24" stop-color="currentColor"></stop>
+                                <stop offset=".24" stopColor="currentColor"></stop>
                                 <stop
                                 offset="1"
-                                stop-color="currentColor"
-                                stop-opacity="0"
+                                stopColor="currentColor"
+                                stopOpacity="0"
                                 ></stop>
                             </linearGradient>
                             <linearGradient
@@ -91,11 +82,11 @@ const Hero = () => {
                                 y2="18.25"
                                 gradientUnits="userSpaceOnUse"
                             >
-                                <stop stop-color="currentColor"></stop>
+                                <stop stopColor="currentColor"></stop>
                                 <stop
                                 offset="1"
-                                stop-color="currentColor"
-                                stop-opacity="0"
+                                stopColor="currentColor"
+                                stopOpacity="0"
                                 ></stop>
                             </linearGradient>
                             </defs>
@@ -107,19 +98,27 @@ const Hero = () => {
                             <path
                             d="M21.25 12a.75.75 0 1 0-1.5 0v8.17l1.5 1.64V12Z"
                             fill="url(#next-icon-gradient-b)"
-                            stroke-width="0"
+                            strokeWidth="0"
                             ></path>
                         </svg>
                         <span className="ml-2.5">Next.js</span>
                         </div>
                     </div>
 
-                    <p className="mt-3 text-lg leading-8 text-gray-600">
-                        Visually-stunning, easy to customize site templates built with
-                        React and Next.js. The perfect starting point for your next
-                        project and the ultimate resource for learning how experts build
-                        real websites with Tailwind CSS.
+                    <p className="mt-3 text-lg text-gray-600">
+                        {'A sua parceira confiável para soluções profissionais de websites que impulsionam o seu negócio para o sucesso online. Criamos e desenvolvemos websites personalizados e de alta qualidade, utilizando as tecnologias mais recentes do mercado.'}
                     </p>
+
+                    <div className="sm:flex hidden sm:mt-8 mt-4">
+                        <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                            Migrating an existing website? {" "}
+                            <a href="#" className="font-semibold text-indigo-600">
+                            <span className="absolute inset-0" aria-hidden="true" />
+                            We can help <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+
                     </div>
                 </div>
                 <div

@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'InterRoman';
+    src: url('/fonts/Inter-roman.var.woff2') format('truetype');
+}
+
+body {
+    font-family: 'InterRoman', Arial, sans-serif;
+    font-feature-settings: "cv02","cv03","cv04","cv11";
+}
