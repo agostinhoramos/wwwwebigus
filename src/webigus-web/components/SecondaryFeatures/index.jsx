@@ -193,7 +193,7 @@ export function SecondaryFeatures() {
     >
       <div className='mx-auto max-w-full px-4 sm:px-6 lg:px-8' >
         <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+          <h2 className="text-3xl font-medium tracking-tight text-primary-950">
             Now is the time to build your portfolio.
           </h2>
           <p className="mt-2 text-lg text-gray-600">

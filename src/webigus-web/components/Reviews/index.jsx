@@ -112,7 +112,7 @@ function StarRating({ rating }) {
           key={index}
           className={classNames(
             'h-5 w-5',
-            rating > index ? 'fill-cyan-500' : 'fill-gray-300'
+            rating > index ? 'fill-primary-950' : 'fill-gray-300'
           )}
         />
       ))}
@@ -144,7 +144,7 @@ function Review({ title, body, author, rating, className, ...props }) {
         </p>
         <p className="mt-3 text-base leading-7">{body}</p>
       </blockquote>
-      <figcaption className="mt-3 text-sm text-gray-600 before:content-['–_']">
+      <figcaption className="mt-3 text-sm text-secondary-100 before:content-['–_']">
         {author}
       </figcaption>
     </figure>
@@ -262,7 +262,7 @@ export function Reviews() {
           id="reviews-title"
           className="text-3xl font-medium tracking-tight text-gray-900 sm:text-center"
         >
-          Everyone is changing their life with WebiGus.
+          Everyone is changing their life with <span className="underline decoration-secondary-950" >WebiGus</span>.
         </h2>
         <p className="mt-2 text-lg text-gray-600 sm:text-center">
           Thousands of people have doubled their net-worth in the last 30 days.

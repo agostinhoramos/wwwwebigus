@@ -5,7 +5,7 @@ const Card = ({ id, datetime, status, productName, productDesc, link, downloads,
 
     return (
         <>
-            <div key={id} className="group border hover:border-gray-300 rounded-md overflow-hidden relative">
+            <div key={id} className="group border transition-colors hover:border-gray-300 hover:group-hover rounded-md overflow-hidden relative">
                 <Link className={"rounded-md"} href={link} >
                     <div className={"bg-gray-50 relative flex h-48"} >
                         <Image
@@ -42,7 +42,7 @@ const Card = ({ id, datetime, status, productName, productDesc, link, downloads,
                             <span className='pl-2 text-sm'>{ downloads }</span>
                             </div>
                         </div>
-                        <div className='text-lg font-medium' >
+                        <div className='text-lg font-medium transition-colors group-hover:text-primary-950' >
                             { productName }
                         </div>
                         <div className='h-full line-clamp-2 leading-tight text-sm text-gray-600' >

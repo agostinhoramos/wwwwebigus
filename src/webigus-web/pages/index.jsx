@@ -9,7 +9,7 @@ import Card from '@/components/product/Card'
 const websites = [
   {
     id: 1,
-    productName: 'Commit Website',
+    productName: 'Commit',
     productDesc:
       "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
     href: '/website/3789261456732/commit',
@@ -48,7 +48,7 @@ const websites = [
   },
   {
     id: 2,
-    productName: 'Pocket Website',
+    productName: 'Pocket',
     productDesc:
       "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
     href: '/website/3789261456732/pocket',
@@ -87,7 +87,7 @@ const websites = [
   },
   {
     id: 3,
-    productName: 'Protocol Website',
+    productName: 'Protocol',
     productDesc:
       "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
     href: '/website/3789261456732/protocol',
@@ -126,7 +126,7 @@ const websites = [
   },
   {
     id: 4,
-    productName: 'Salient Website',
+    productName: 'Salient',
     productDesc:
       "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
     href: '/website/3789261456732/salient',
@@ -165,7 +165,7 @@ const websites = [
   },
   {
     id: 5,
-    productName: 'Spotlight Website',
+    productName: 'Spotlight',
     productDesc:
       "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
     href: '/website/3789261456732/spotlight',
@@ -204,7 +204,7 @@ const websites = [
   },
   {
     id: 6,
-    productName: 'Syntax Website',
+    productName: 'Syntax',
     productDesc:
       "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
     href: '/website/3789261456732/syntax',
@@ -243,7 +243,7 @@ const websites = [
   },
   {
     id: 7,
-    productName: 'Transmit Website',
+    productName: 'Transmit',
     productDesc:
       "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
     href: '/website/3789261456732/transmit',
@@ -282,16 +282,110 @@ const websites = [
   },
 ]
 
-const plugins = []
+const plugins = [
+    {
+        id: 1,
+        productName: 'OpenCart Point of Sale System POS',
+        productDesc:
+          "OpenCart Point of Sale System allows you to keep track of sales and inventory with a physical system on the store and an application to manage your invoicing, billing & inventory.",
+        href: '/plugin/openchart-point-of-sale-system-pos',
+        downloads: 443,
+        image: [
+          {
+            src: '/upload/external/plugin/officalpartner.jpg',
+            alt: 'OpenCart POS preview 01',
+          }
+        ],
+        technologies: [
+          {
+            id: 'nextjs',
+            src: 'nextjs.png',
+            alt: 'NextJS',
+          },
+          {
+            id: 'tailwindcss',
+            src: 'tailwindcss.png',
+            alt: 'Tailwindcss',
+          },
+          {
+            id: 'python',
+            src: 'python.png',
+            alt: 'Python',
+          },
+        ],
+    },
+    {
+        id: 2,
+        productName: 'Form Builder Pro - Multi Form Creator',
+        productDesc:
+          "Quickly and easily, create any type of form you want. By using form builder create the form with any type of fields you want, make them require if necessary and set the custom error message for required fields.",
+        href: '/plugin/form-builder-pro-multi-form-creator',
+        downloads: 215,
+        image: [
+          {
+            src: '/upload/external/plugin/ci_oc_partner.jpg',
+            alt: 'OpenCart POS preview 01',
+          }
+        ],
+        technologies: [
+          {
+            id: 'nextjs',
+            src: 'nextjs.png',
+            alt: 'NextJS',
+          },
+          {
+            id: 'tailwindcss',
+            src: 'tailwindcss.png',
+            alt: 'Tailwindcss',
+          },
+          {
+            id: 'python',
+            src: 'python.png',
+            alt: 'Python',
+          },
+        ],
+    },
+    {
+        id: 3,
+        productName: 'AJAX Quick Checkout PRO',
+        productDesc:
+          "We have been the best selling extension for over 3 years with the competition far behind. With hundreds of compatible modules, you can be sure you are getting the best checkout possible.",
+        href: '/plugin/ajax-quick-checkout-pro',
+        downloads: 215,
+        image: [
+          {
+            src: '/upload/external/plugin/5a0aed22d6979-resize-710x380.jpg',
+            alt: 'AJAX Quick Checkout PR',
+          }
+        ],
+        technologies: [
+          {
+            id: 'nextjs',
+            src: 'nextjs.png',
+            alt: 'NextJS',
+          },
+          {
+            id: 'tailwindcss',
+            src: 'tailwindcss.png',
+            alt: 'Tailwindcss',
+          },
+          {
+            id: 'python',
+            src: 'python.png',
+            alt: 'Python',
+          },
+        ],
+    }
+]
 
 const SectionTab = ({ title, desc, link }) => {
   return (
     <>
-      <h2 class="mt-8 font-semibold text-indigo-500">{title}</h2>
+      <h2 class="mt-8 font-semibold text-primary-950">{title}</h2>
       <p class="mt-4 max-w-3xl space-y-6 ">{desc}</p>
       <div class="mt-4">
         <Link
-          class="text-base font-semibold text-sky-500 hover:text-slate-700"
+          class="text-base font-semibold text-secondary-950 hover:text-secondary-700"
           href={link}
         >
           {`Explore all ${title.toLowerCase()}`} <span aria-hidden="true">→</span>

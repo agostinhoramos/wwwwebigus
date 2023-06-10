@@ -72,8 +72,8 @@ export function Faqs() {
           <p className="mt-2 text-lg text-gray-600">
             If you have anything else you want to ask,{' '}
             <Link
-              href="mailto:info@example.com"
-              className="text-gray-900 underline"
+              href="mailto:info@webigus.com"
+              className="text-secondary-950 transition-colors hover:text-secondary-700 underline"
             >
               reach out to us
             </Link>
