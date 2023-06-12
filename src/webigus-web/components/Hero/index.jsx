@@ -1,7 +1,9 @@
+import { FakeBrowser } from './component/FakeBrownser'
+
 const Hero = () => {
   return (
     <>
-      <div className="relative isolate h-screen px-6 pt-14 lg:px-8">
+      <div className="relative isolate xl:h-screen px-6 pt-14 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -15,10 +17,10 @@ const Hero = () => {
           />
         </div>
 
-        <div className="flex flex-row max-w-full pt-16">
-          <div className="xl:basis-1/3">
+        <div className="flex max-w-full flex-row pt-10">
+          <div className="px-2 xl:basis-1/3">
             <div className="">
-              <h1 className="text-xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+              <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl text-center xl:text-left">
                 Alto Desempenho para Voar ainda{' '}
                 <span className="underline decoration-secondary-950">
                   Mais Rápido
@@ -26,96 +28,98 @@ const Hero = () => {
                 ✈️
               </h1>
 
-              <div className="mt-4 flex flex-wrap">
-                <div className="flex items-center text-sm font-medium text-slate-500">
-                  <svg
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-8 flex-none stroke-current text-slate-400"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <ellipse cx="16" cy="16" rx="13" ry="5"></ellipse>
-                    <ellipse
-                      cx="16"
-                      cy="16"
-                      rx="13"
-                      ry="5"
-                      transform="rotate(60 16 16)"
-                    ></ellipse>
-                    <ellipse
-                      rx="13"
-                      ry="5"
-                      transform="matrix(-.5 .86603 .86603 .5 16 16)"
-                    ></ellipse>
-                    <circle cx="16" cy="16" r="2"></circle>
-                  </svg>
-                  <span className="ml-2.5">React</span>
-                </div>
-                <div className="ml-6 flex items-center text-sm font-medium text-slate-500">
-                  <svg
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-8 flex-none stroke-current text-slate-400"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <defs>
-                      <linearGradient
-                        id="next-icon-gradient-a"
-                        x1="15.125"
-                        y1="18.25"
-                        x2="24.25"
-                        y2="27.375"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop offset=".24" stopColor="currentColor"></stop>
-                        <stop
-                          offset="1"
-                          stopColor="currentColor"
-                          stopOpacity="0"
-                        ></stop>
-                      </linearGradient>
-                      <linearGradient
-                        id="next-icon-gradient-b"
-                        x1="20.5"
-                        y1="11.25"
-                        x2="20.5"
-                        y2="18.25"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop stopColor="currentColor"></stop>
-                        <stop
-                          offset="1"
-                          stopColor="currentColor"
-                          stopOpacity="0"
-                        ></stop>
-                      </linearGradient>
-                    </defs>
-                    <path d="M16.25 28.5c6.765 0 12.25-5.485 12.25-12.25S23.015 4 16.25 4 4 9.485 4 16.25 9.485 28.5 16.25 28.5Z"></path>
-                    <path
-                      d="M12 21.5V12l12.25 14.25"
-                      stroke="url(#next-icon-gradient-a)"
-                    ></path>
-                    <path
-                      d="M21.25 12a.75.75 0 1 0-1.5 0v8.17l1.5 1.64V12Z"
-                      fill="url(#next-icon-gradient-b)"
-                      strokeWidth="0"
-                    ></path>
-                  </svg>
-                  <span className="ml-2.5">Next.js</span>
+              <div className='w-full mt-4'>
+                <div className="flex justify-center xl:justify-start flex-wrap">
+                  <div className="flex items-center text-sm font-medium text-slate-500">
+                    <svg
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-8 w-8 flex-none stroke-current text-slate-400"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <ellipse cx="16" cy="16" rx="13" ry="5"></ellipse>
+                      <ellipse
+                        cx="16"
+                        cy="16"
+                        rx="13"
+                        ry="5"
+                        transform="rotate(60 16 16)"
+                      ></ellipse>
+                      <ellipse
+                        rx="13"
+                        ry="5"
+                        transform="matrix(-.5 .86603 .86603 .5 16 16)"
+                      ></ellipse>
+                      <circle cx="16" cy="16" r="2"></circle>
+                    </svg>
+                    <span className="ml-2.5">React</span>
+                  </div>
+                  <div className="ml-6 flex items-center text-sm font-medium text-slate-500">
+                    <svg
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-8 w-8 flex-none stroke-current text-slate-400"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="next-icon-gradient-a"
+                          x1="15.125"
+                          y1="18.25"
+                          x2="24.25"
+                          y2="27.375"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop offset=".24" stopColor="currentColor"></stop>
+                          <stop
+                            offset="1"
+                            stopColor="currentColor"
+                            stopOpacity="0"
+                          ></stop>
+                        </linearGradient>
+                        <linearGradient
+                          id="next-icon-gradient-b"
+                          x1="20.5"
+                          y1="11.25"
+                          x2="20.5"
+                          y2="18.25"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stopColor="currentColor"></stop>
+                          <stop
+                            offset="1"
+                            stopColor="currentColor"
+                            stopOpacity="0"
+                          ></stop>
+                        </linearGradient>
+                      </defs>
+                      <path d="M16.25 28.5c6.765 0 12.25-5.485 12.25-12.25S23.015 4 16.25 4 4 9.485 4 16.25 9.485 28.5 16.25 28.5Z"></path>
+                      <path
+                        d="M12 21.5V12l12.25 14.25"
+                        stroke="url(#next-icon-gradient-a)"
+                      ></path>
+                      <path
+                        d="M21.25 12a.75.75 0 1 0-1.5 0v8.17l1.5 1.64V12Z"
+                        fill="url(#next-icon-gradient-b)"
+                        strokeWidth="0"
+                      ></path>
+                    </svg>
+                    <span className="ml-2.5">Next.js</span>
+                  </div>
                 </div>
               </div>
 
-              <p className="mt-3 text-lg text-gray-600">
+              <p className="mt-3 text-lg text-gray-600 text-center xl:text-left px-16 xl:px-0 hidden sm:block">
                 {
                   'A sua parceira confiável para soluções profissionais de websites que impulsionam o seu negócio para o sucesso online. Criamos e desenvolvemos websites personalizados e de alta qualidade, utilizando as tecnologias mais recentes do mercado.'
                 }
               </p>
 
-              <div className="mt-4 hidden sm:mt-8 sm:flex">
+              <div className="mt-4 hidden sm:mt-8 sm:flex justify-center xl:justify-start">
                 <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                   Migrating an existing website?{' '}
                   <a href="#" className="font-semibold text-secondary-950">
@@ -124,78 +128,41 @@ const Hero = () => {
                   </a>
                 </div>
               </div>
+
+              <div class="mt-8 flex gap-4 justify-center xl:justify-start">
+                <a
+                  class="inline-flex justify-center rounded-md bg-slate-700 px-4 py-2 text-sm font-semibold tracking-tight text-white shadow-sm"
+                  href="/websites"
+                >
+                  Explore all websites
+                </a>
+                <a
+                  class="inline-flex justify-center rounded-md bg-secondary-700 px-4 py-2 text-sm font-semibold tracking-tight text-white shadow-sm"
+                  href="/plugins"
+                >
+                  Explore all plugins
+                </a>
+              </div>
+
             </div>
           </div>
+          <div className="hidden basis-2/3 px-2 xl:block">
+            <FakeBrowser />
+          </div>
+        </div>
 
-          <div className="basis-2/3 hidden xl:block">
-            <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:pl-20 lg:mt-0 lg:pl-0">
-              
-            <div className="ml-auto w-72 flex-none space-y-8 sm:ml-0 lg:order-last xl:order-none">
-            <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                    alt=""
-                    className="h-48 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                </div>
-                <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                    alt=""
-                    className="h-48 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                </div>
-                <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                    alt=""
-                    className="h-48 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                </div>
-            </div>
-
-              
-            <div className="mr-auto w-72 flex-none space-y-8 sm:mr-0">
-                <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                    alt=""
-                    className="h-48 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                </div>
-                <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                    alt=""
-                    className="h-48 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                </div>
-                <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
-                    alt=""
-                    className="h-48 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                </div>
-            </div>
-
-            <div className="ml-auto w-72 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
-                <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                    alt=""
-                    className="h-48 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                </div>
-            </div>
-
+        <div className="flex max-w-full flex-row pt-10">
+          <div className="hidden xl:flex xl:h-48 w-full items-stretch">
+            <div className="mx-auto animate-bounce self-end">
+              <svg
+                fill="#EBEBEB"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 50 50"
+                width="50px"
+                height="50px"
+              >
+                <path d="M 44.984375 6.96875 C 44.453125 6.984375 43.953125 7.203125 43.585938 7.585938 L 25 26.171875 L 6.414063 7.585938 C 6.035156 7.199219 5.519531 6.980469 4.976563 6.980469 C 4.164063 6.980469 3.433594 7.476563 3.128906 8.230469 C 2.820313 8.984375 3.003906 9.847656 3.585938 10.414063 L 25 31.828125 L 46.414063 10.414063 C 47.007813 9.84375 47.195313 8.964844 46.875 8.203125 C 46.558594 7.441406 45.808594 6.953125 44.984375 6.96875 Z M 44.984375 19.96875 C 44.453125 19.984375 43.953125 20.203125 43.585938 20.585938 L 25 39.171875 L 6.414063 20.585938 C 6.035156 20.199219 5.519531 19.980469 4.976563 19.980469 C 4.164063 19.980469 3.433594 20.476563 3.128906 21.230469 C 2.820313 21.984375 3.003906 22.847656 3.585938 23.414063 L 25 44.828125 L 46.414063 23.414063 C 47.007813 22.84375 47.195313 21.964844 46.875 21.203125 C 46.558594 20.441406 45.808594 19.953125 44.984375 19.96875 Z" />
+              </svg>
             </div>
           </div>
         </div>

@@ -280,6 +280,201 @@ const websites = [
       },
     ],
   },
+  {
+    id: 7,
+    productName: 'Transmit',
+    productDesc:
+      "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
+    href: '/website/3789261456732/transmit',
+    downloads: 325,
+    image: [
+      {
+        src: '/upload/external/website/transmit/preview-01.png',
+        alt: 'Transmit preview 01',
+      },
+      {
+        src: '/upload/external/website/transmit/preview-02.png',
+        alt: 'Transmit preview 02',
+      },
+      {
+        src: '/upload/external/website/transmit/preview-03.png',
+        alt: 'Transmit preview 03',
+      },
+    ],
+    technologies: [
+      {
+        id: 'nextjs',
+        src: 'nextjs.png',
+        alt: 'NextJS',
+      },
+      {
+        id: 'tailwindcss',
+        src: 'tailwindcss.png',
+        alt: 'Tailwindcss',
+      },
+      {
+        id: 'python',
+        src: 'python.png',
+        alt: 'Python',
+      },
+    ],
+  },
+  {
+    id: 7,
+    productName: 'Transmit',
+    productDesc:
+      "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
+    href: '/website/3789261456732/transmit',
+    downloads: 325,
+    image: [
+      {
+        src: '/upload/external/website/transmit/preview-01.png',
+        alt: 'Transmit preview 01',
+      },
+      {
+        src: '/upload/external/website/transmit/preview-02.png',
+        alt: 'Transmit preview 02',
+      },
+      {
+        src: '/upload/external/website/transmit/preview-03.png',
+        alt: 'Transmit preview 03',
+      },
+    ],
+    technologies: [
+      {
+        id: 'nextjs',
+        src: 'nextjs.png',
+        alt: 'NextJS',
+      },
+      {
+        id: 'tailwindcss',
+        src: 'tailwindcss.png',
+        alt: 'Tailwindcss',
+      },
+      {
+        id: 'python',
+        src: 'python.png',
+        alt: 'Python',
+      },
+    ],
+  },
+  {
+    id: 7,
+    productName: 'Transmit',
+    productDesc:
+      "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
+    href: '/website/3789261456732/transmit',
+    downloads: 325,
+    image: [
+      {
+        src: '/upload/external/website/transmit/preview-01.png',
+        alt: 'Transmit preview 01',
+      },
+      {
+        src: '/upload/external/website/transmit/preview-02.png',
+        alt: 'Transmit preview 02',
+      },
+      {
+        src: '/upload/external/website/transmit/preview-03.png',
+        alt: 'Transmit preview 03',
+      },
+    ],
+    technologies: [
+      {
+        id: 'nextjs',
+        src: 'nextjs.png',
+        alt: 'NextJS',
+      },
+      {
+        id: 'tailwindcss',
+        src: 'tailwindcss.png',
+        alt: 'Tailwindcss',
+      },
+      {
+        id: 'python',
+        src: 'python.png',
+        alt: 'Python',
+      },
+    ],
+  },
+  {
+    id: 7,
+    productName: 'Transmit',
+    productDesc:
+      "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
+    href: '/website/3789261456732/transmit',
+    downloads: 325,
+    image: [
+      {
+        src: '/upload/external/website/transmit/preview-01.png',
+        alt: 'Transmit preview 01',
+      },
+      {
+        src: '/upload/external/website/transmit/preview-02.png',
+        alt: 'Transmit preview 02',
+      },
+      {
+        src: '/upload/external/website/transmit/preview-03.png',
+        alt: 'Transmit preview 03',
+      },
+    ],
+    technologies: [
+      {
+        id: 'nextjs',
+        src: 'nextjs.png',
+        alt: 'NextJS',
+      },
+      {
+        id: 'tailwindcss',
+        src: 'tailwindcss.png',
+        alt: 'Tailwindcss',
+      },
+      {
+        id: 'python',
+        src: 'python.png',
+        alt: 'Python',
+      },
+    ],
+  },
+  {
+    id: 7,
+    productName: 'Transmit',
+    productDesc:
+      "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
+    href: '/website/3789261456732/transmit',
+    downloads: 325,
+    image: [
+      {
+        src: '/upload/external/website/transmit/preview-01.png',
+        alt: 'Transmit preview 01',
+      },
+      {
+        src: '/upload/external/website/transmit/preview-02.png',
+        alt: 'Transmit preview 02',
+      },
+      {
+        src: '/upload/external/website/transmit/preview-03.png',
+        alt: 'Transmit preview 03',
+      },
+    ],
+    technologies: [
+      {
+        id: 'nextjs',
+        src: 'nextjs.png',
+        alt: 'NextJS',
+      },
+      {
+        id: 'tailwindcss',
+        src: 'tailwindcss.png',
+        alt: 'Tailwindcss',
+      },
+      {
+        id: 'python',
+        src: 'python.png',
+        alt: 'Python',
+      },
+    ],
+  },
 ]
 
 const plugins = [
@@ -381,11 +576,11 @@ const plugins = [
 const SectionTab = ({ title, desc, link }) => {
   return (
     <>
-      <h2 class="mt-8 font-semibold text-primary-950">{title}</h2>
-      <p class="mt-4 max-w-3xl space-y-6 ">{desc}</p>
-      <div class="mt-4">
+      <h2 className="mt-8 font-semibold text-primary-950">{title}</h2>
+      <p className="mt-4 max-w-3xl space-y-6 ">{desc}</p>
+      <div className="mt-4">
         <Link
-          class="text-base font-semibold text-secondary-950 hover:text-secondary-700"
+          className="text-base font-semibold text-secondary-950 hover:text-secondary-700"
           href={link}
         >
           {`Explore all ${title.toLowerCase()}`} <span aria-hidden="true">→</span>
@@ -438,20 +633,20 @@ export default function Home() {
             </div>
 
             {websites.length > 10 ? (
-              <div class="pointer-events-none absolute -inset-x-2.5 -bottom-2.5 h-[16.6%] bg-gradient-to-t from-white to-white/25 sm:h-[33.3%]"></div>
+              <div className="pointer-events-none absolute -inset-x-2.5 -bottom-2.5 h-[8%] bg-gradient-to-t from-white to-white/25 sm:h-[33.3%]"></div>
             ) : (
               ''
             )}
           </div>
 
           {websites.length > 10 ? (
-            <div class="pointer-events-none relative z-10 -mt-5 flex justify-center">
+            <div className="pointer-events-none relative z-10 -mt-5 flex justify-center">
               <a
-                class="pointer-events-auto inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
+                className="pointer-events-auto inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
                 href="/components/#product-application-ui"
               >
                 <span>
-                  Show more...<span class="sr-only">, Application UI</span>
+                  Show more...<span className="sr-only">, Application UI</span>
                 </span>
               </a>
             </div>
@@ -489,20 +684,20 @@ export default function Home() {
             </div>
 
             {plugins?.length > 10 ? (
-              <div class="pointer-events-none absolute -inset-x-2.5 -bottom-2.5 h-[16.6%] bg-gradient-to-t from-white to-white/25 sm:h-[33.3%]"></div>
+              <div className="pointer-events-none absolute -inset-x-2.5 -bottom-2.5 h-[16.6%] bg-gradient-to-t from-white to-white/25 sm:h-[33.3%]"></div>
             ) : (
               ''
             )}
           </div>
 
           {plugins?.length > 10 ? (
-            <div class="pointer-events-none relative z-10 -mt-5 flex justify-center">
+            <div className="pointer-events-none relative z-10 -mt-5 flex justify-center">
               <a
-                class="pointer-events-auto inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
+                className="pointer-events-auto inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
                 href="/components/#product-application-ui"
               >
                 <span>
-                  Show more...<span class="sr-only">, Application UI</span>
+                  Show more...<span className="sr-only">, Application UI</span>
                 </span>
               </a>
             </div>
