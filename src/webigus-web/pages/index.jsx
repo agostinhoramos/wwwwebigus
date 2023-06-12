@@ -609,7 +609,7 @@ export default function Home() {
           className="mx-auto max-w-2xl px-4 pb-3.5 sm:px-6 lg:max-w-full lg:px-8"
           aria-labelledby="order-history-heading"
         >
-          <div className="relative">
+          <div className="relative mx-auto max-w-7xl px-6 sm:px-8 xl:px-0">
             <SectionTab
               title="Websites"
               desc="Over 500+ professionally designed, fully responsive, expertly crafted component examples you can drop into your Tailwind projects and customize to your heart’s content."
@@ -660,7 +660,7 @@ export default function Home() {
           className="mx-auto max-w-2xl px-4 pb-24 sm:px-6 lg:max-w-full lg:px-8"
           aria-labelledby="order-history-heading"
         >
-          <div className="relative">
+          <div className="relative mx-auto max-w-7xl px-6 sm:px-8 xl:px-0">
             <SectionTab
               title="Plugins"
               desc="Explore our plugin designed for you Website"

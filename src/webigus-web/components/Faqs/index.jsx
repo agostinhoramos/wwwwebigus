@@ -3,53 +3,53 @@ import Link from 'next/link'
 const faqs = [
   [
     {
-      question: 'How do I know the tips are good?',
+      question: 'Quais serviços o Webigus oferece?',
       answer:
-        'Our whole business depends on our tips being good, so it’s in our best interest that they are. The results of our customers speak for themselves, just trust us.',
+        'O Webigus oferece serviços de criação de websites e plugins personalizados, utilizando tecnologias como Next.js, Tailwind CSS e Django.',
     },
     {
-      question: 'Isn’t this insider trading?',
+      question: 'Quanto tempo leva para desenvolver um website ou plugin?',
       answer:
-        'Yes exactly. But at scale! Historically you could only make insider trades with knowledge from your direct network. Pocket brings you insider trading tips from people you don’t even know.',
+        'O tempo de desenvolvimento pode variar dependendo da complexidade do projeto. O Webigus trabalhará em estreita colaboração com você para estabelecer prazos realistas e entregar o projeto dentro do período acordado.',
     },
     {
-      question: 'But isn’t insider trading illegal?',
+      question: 'Posso ter um design personalizado para o meu website?',
       answer:
-        'Here’s the thing: you’re the one doing the insider trading, not us. We’re just giving you the tips and some tools to make trades. We’re not doing anything wrong here.',
-    },
-  ],
-  [
-    {
-      question: 'Do the people giving you tips realize what they are doing?',
-      answer:
-        'Again I would argue this isn’t really our responsibility. People make their own choices. If they don’t research the consequences that’s on them, not on us.',
-    },
-    {
-      question: 'Where is Pocket based?',
-      answer:
-        'Let’s just say it’s not somewhere where the SEC is going to find us.',
-    },
-    {
-      question: 'Is there any age limit to trading on Pocket?',
-      answer:
-        'For our free plan, the age limit is based on the minimum age to trade in your country of residence. Our VIP plan uses advanced transaction anonymization though, so you can use that plan even if you’re 9 years old. Or a dog.',
+        'Sim, o Webigus oferece designs personalizados para atender às necessidades exclusivas de cada cliente. Eles podem criar um design exclusivo que reflita sua identidade e objetivos de negócios.',
     },
   ],
   [
     {
-      question: 'How did you get this on the App Store?',
+      question: 'Os websites desenvolvidos pelo Webigus são responsivos?',
       answer:
-        'Honestly we were surprised too, but eventually we found out that the app reviewer found the app so compelling they approved it just so they could use it themselves.',
+        'Sim, o Webigus desenvolve websites responsivos, que se adaptam a diferentes dispositivos e tamanhos de tela, proporcionando uma experiência de navegação consistente e agradável em qualquer dispositivo.',
     },
     {
-      question: 'How do I explain the money I withdraw from Pocket to the IRS?',
+      question: 'O Webigus oferece suporte técnico após o lançamento do projeto?',
       answer:
-        'This feels like one-hundred percent a you problem. Pocket is not responsible in any way for your tax returns.',
+        'Sim, o Webigus fornece suporte técnico contínuo para resolver quaisquer problemas técnicos, realizar atualizações de software e responder a perguntas relacionadas aos websites e plugins desenvolvidos.',
     },
     {
-      question: 'How do I become an insider?',
+      question: 'Posso personalizar meu website ou plugin no futuro?',
       answer:
-        'Contact us with some details about your industry and the type of access you have to apply for an insider account. Once approved, we’ll send you a guide on collecting insider information without being detected at work.',
+        'Sim, o Webigus oferece recursos de personalização avançados. Eles podem fornecer um painel de controle intuitivo que permite ajustar e modificar elementos do website ou plugin de acordo com suas necessidades em qualquer momento.',
+    },
+  ],
+  [
+    {
+      question: 'O Webigus otimiza os websites para mecanismos de busca (SEO)?',
+      answer:
+        'Sim, o Webigus pode otimizar seus websites seguindo as práticas recomendadas de SEO. Isso ajuda a melhorar a visibilidade e o posicionamento nos resultados de pesquisa, aumentando as chances de ser encontrado pelos usuários.',
+    },
+    {
+      question: 'Como são feitas as integrações com mídias sociais?',
+      answer:
+        'O Webigus pode integrar recursos de mídias sociais em seus websites, permitindo que os visitantes compartilhem facilmente o conteúdo em plataformas como Facebook, Twitter, Instagram e outras.',
+    },
+    {
+      question: 'O Webigus oferece serviços de manutenção e atualizações regulares?',
+      answer:
+        'Sim, o Webigus pode fornecer serviços de manutenção contínua e atualizações regulares para garantir que seus websites e plugins permaneçam funcionais, seguros e atualizados com as últimas tecnologias.',
     },
   ],
 ]
@@ -61,21 +61,21 @@ export function Faqs() {
       aria-labelledby="faqs-title"
       className="border-t border-gray-200 py-20 sm:py-32"
     >
-      <div className='mx-auto max-w-full px-4 sm:px-6 lg:px-8'>
+      <div className='mx-auto max-w-7xl px-6 sm:px-8 xl:px-0'>
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="faqs-title"
             className="text-3xl font-medium tracking-tight text-gray-900"
           >
-            Frequently asked questions
+            Perguntas frequentes
           </h2>
           <p className="mt-2 text-lg text-gray-600">
-            If you have anything else you want to ask,{' '}
+            Se tiver mais alguma pergunta,{' '}
             <Link
               href="mailto:info@webigus.com"
               className="text-secondary-950 transition-colors hover:text-secondary-700 underline"
             >
-              reach out to us
+              deixe-nos a sua mensagem
             </Link>
             .
           </p>

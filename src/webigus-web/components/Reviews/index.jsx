@@ -244,8 +244,6 @@ function ReviewGrid() {
           />
         </>
       )}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-50" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-gray-50" />
     </div>
   )
 }
@@ -257,17 +255,19 @@ export function Reviews() {
       aria-labelledby="reviews-title"
       className="pt-10 sm:pt-16"
     >
-      <div className='mx-auto max-w-full px-4 sm:px-6 lg:px-8'>
+      <div className='mx-auto max-w-7xl px-6 sm:px-8 xl:px-0'>
         <h2
           id="reviews-title"
           className="text-3xl font-medium tracking-tight text-gray-900 sm:text-center"
         >
-          Everyone is changing their life with <span className="underline decoration-secondary-950" >WebiGus</span>.
+          {'Transformando a vida de todos com a'} <span className="underline font-semibold decoration-secondary-950" >WebiGus</span>.
         </h2>
         <p className="mt-2 text-lg text-gray-600 sm:text-center">
-          Thousands of people have doubled their net-worth in the last 30 days.
+          {'Permitimos o aumento do património líquido anualmente.'}
         </p>
+
         <ReviewGrid />
+        
       </div>
     </section>
   )

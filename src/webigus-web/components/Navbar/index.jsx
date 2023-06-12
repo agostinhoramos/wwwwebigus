@@ -15,7 +15,7 @@ export default function Navbar() {
     transform: 'translateZ(0)',
     webkitBackdropFilter: 'saturate(180%) blur(5px)',
     backdropFilter: 'saturate(180%) blur(5px)',
-    background: 'hsla(0,0%,100%,.6)',
+    background: 'hsla(0,0%,100%,.9)',
   }
 
   return (

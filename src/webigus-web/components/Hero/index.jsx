@@ -121,10 +121,10 @@ const Hero = () => {
 
               <div className="mt-4 hidden sm:mt-8 sm:flex justify-center xl:justify-start">
                 <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                  Migrating an existing website?{' '}
+                  {'Precisa de ajuda técnica? '}
                   <a href="#" className="font-semibold text-secondary-950">
                     <span className="absolute inset-0" aria-hidden="true" />
-                    We can help <span aria-hidden="true">&rarr;</span>
+                    Podemos ajudar <span aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
               </div>
@@ -134,13 +134,13 @@ const Hero = () => {
                   class="inline-flex justify-center rounded-md bg-slate-700 px-4 py-2 text-sm font-semibold tracking-tight text-white shadow-sm"
                   href="/websites"
                 >
-                  Explore all websites
+                  Ver Websites
                 </a>
                 <a
                   class="inline-flex justify-center rounded-md bg-secondary-700 px-4 py-2 text-sm font-semibold tracking-tight text-white shadow-sm"
                   href="/plugins"
                 >
-                  Explore all plugins
+                  Ver Plugins
                 </a>
               </div>
 

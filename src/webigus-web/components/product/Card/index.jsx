@@ -47,7 +47,7 @@ const Card = ({ id, datetime, status, productName, productDesc, link, downloads,
                             <span className='pl-2 text-sm'>{ downloads }</span>
                             </div>
                         </div>
-                        <div className='text-lg font-medium transition-colors group-hover:text-primary-950' >
+                        <div className='text-lg font-medium truncate h-16 transition-colors group-hover:text-primary-950' >
                             { productName }
                         </div>
                         <div className='h-full line-clamp-2 leading-tight text-sm text-gray-600' >
