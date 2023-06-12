@@ -41,7 +41,7 @@ const websites = [
       },
       {
         id: 'python',
-        src: 'python.png',
+        src: 'django-python.png',
         alt: 'Python',
       },
     ],
