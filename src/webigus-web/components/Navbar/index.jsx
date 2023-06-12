@@ -41,8 +41,8 @@ export default function Navbar() {
                 />
               </div>
               <div className="hidden xl:flex flex-grow items-center justify-center">
-                <a className="text-sm py-1 px-2 rounded-xl bg-white text-gray-700 bg-opacity-70" href="/websites">Websites</a>
-                <a className="text-sm ml-8 py-1 px-2 rounded-xl text-gray-700" href="/plugins">
+                <a className="text-sm py-1 px-2 rounded-xl bg-white font-medium text-gray-700 bg-opacity-70" href="/websites">Websites</a>
+                <a className="text-sm ml-8 py-1 px-2 rounded-xl font-medium text-gray-700" href="/plugins">
                   Plugins
                 </a>
                 <button

@@ -643,7 +643,7 @@ export default function Home() {
             <div className="pointer-events-none relative z-10 -mt-5 flex justify-center">
               <a
                 className="pointer-events-auto inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
-                href="/components/#product-application-ui"
+                href="/websites"
               >
                 <span>
                   Show more...<span className="sr-only">, Application UI</span>
@@ -694,7 +694,7 @@ export default function Home() {
             <div className="pointer-events-none relative z-10 -mt-5 flex justify-center">
               <a
                 className="pointer-events-auto inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
-                href="/components/#product-application-ui"
+                href="/plugins"
               >
                 <span>
                   Show more...<span className="sr-only">, Application UI</span>
@@ -706,6 +706,8 @@ export default function Home() {
           )}
         </div>
         ):''}
+
+      
 
       </BaseLayout>
     </>
