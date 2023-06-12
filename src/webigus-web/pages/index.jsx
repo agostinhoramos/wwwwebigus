@@ -615,7 +615,7 @@ export default function Home() {
               desc="Over 500+ professionally designed, fully responsive, expertly crafted component examples you can drop into your Tailwind projects and customize to your heart’s content."
               link="/websites"
             />
-            <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-2 lg:grid-cols-3 xl:grid-cols-4">
               {websites?.map((order, index) => (
                 <Card
                   key={index}
@@ -633,7 +633,7 @@ export default function Home() {
             </div>
 
             {websites.length > 10 ? (
-              <div className="pointer-events-none absolute -inset-x-2.5 -bottom-2.5 h-[8%] bg-gradient-to-t from-white to-white/25 sm:h-[33.3%]"></div>
+              <div className="pointer-events-none absolute -inset-x-2.5 -bottom-2.5 bg-gradient-to-t from-white to-white/25 h-[9%] xl:h-[12%]"></div>
             ) : (
               ''
             )}
@@ -666,7 +666,7 @@ export default function Home() {
               desc="Explore our plugin designed for you Website"
               link="/plugins"
             />
-            <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-2 lg:grid-cols-3 xl:grid-cols-4">
               {plugins?.map((order, index) => (
                 <Card
                   key={index}

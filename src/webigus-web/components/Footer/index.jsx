@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const bgStyle = {
   transition: "background .3s ease,box-shadow .3s ease",
   boxShadow: "inset 0 1px 0 #eaeaea",
@@ -22,33 +24,25 @@ export function Footer() {
 
 const navigation = {
   solutions: [
-    { name: 'Marketing', href: '#' },
-    { name: 'Analytics', href: '#' },
-    { name: 'Commerce', href: '#' },
-    { name: 'Insights', href: '#' },
-  ],
-  support: [
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Guides', href: '#' },
-    { name: 'API Status', href: '#' },
+    { name: 'Desenvolvimento de Websites', href: '/about/websites' },
+    { name: 'Desenvolvimento de Plugins', href: '/about/plugins' },
+    { name: 'Design de Interface', href: '/about/design_interface' },
+    { name: 'Otimização de Mecanismos de Busca (SEO)', href: '/about/seo' },
+    { name: 'Integração de Mídias Sociais', href: '/about/social_media' },
+    { name: 'Manutenção e Suporte Técnico', href: '/about/technical_support' },
   ],
   company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
+    { name: 'Quem Somos', href: '/about' },
+    { name: 'Contacte-nos', href: '/contact' }
   ],
   legal: [
-    { name: 'Claim', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
+    { name: 'Política de Privacidade', href: '/privacy-policy' },
+    { name: 'Catálogo de alterações', href: '/changelog' },
   ],
   social: [
     {
       name: 'Facebook',
-      href: '#',
+      href: 'https://www.facebook.com/webigus.com/?hl=pt',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -61,7 +55,7 @@ const navigation = {
     },
     {
       name: 'Instagram',
-      href: '#',
+      href: 'https://www.instagram.com/webigus/?hl=pt',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -73,17 +67,8 @@ const navigation = {
       ),
     },
     {
-      name: 'Twitter',
-      href: '#',
-      icon: (props) => (
-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-        </svg>
-      ),
-    },
-    {
       name: 'GitHub',
-      href: '#',
+      href: 'https://github.com/webigus/?hl=pt',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -96,7 +81,7 @@ const navigation = {
     },
     {
       name: 'YouTube',
-      href: '#',
+      href: 'https://www.youtube.com/webigus/?hl=pt',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -124,23 +109,11 @@ export function FullFooter() {
             alt="Company name"
           />
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+            <div className="md:grid md:grid-cols-1 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">Solutions</h3>
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">{'Serviços'}</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.solutions.map((item) => (
-                    <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">Support</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.support.map((item) => (
                     <li key={item.name}>
                       <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                         {item.name}
@@ -152,7 +125,7 @@ export function FullFooter() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">Company</h3>
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">{'Empresa'}</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
@@ -164,7 +137,7 @@ export function FullFooter() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">Legal</h3>
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">{'Links úteis'}</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
@@ -181,14 +154,14 @@ export function FullFooter() {
         <div className="border-t border-gray-900/10 mt-16 sm:mt-20 lg:mt-24">
           <div className="max-w-7xl mx-auto pt-8 lg:flex lg:items-center lg:justify-between" >
             <div>
-              <h3 className="text-sm font-semibold leading-6 text-gray-900">Subscribe to our newsletter</h3>
+              <h3 className="text-sm font-semibold leading-6 text-gray-900">Assine nossa newsletter</h3>
               <p className="mt-2 text-sm leading-6 text-gray-600">
-                The latest news, articles, and resources, sent to your inbox weekly.
+                As últimas notícias, artigos e recursos, enviados semanalmente para sua caixa de entrada.
               </p>
             </div>
             <form className="mt-6 sm:flex sm:max-w-md lg:mt-0">
               <label htmlFor="email-address" className="sr-only">
-                Email address
+                Endereço de e-mail
               </label>
               <input
                 type="email"
@@ -196,15 +169,15 @@ export function FullFooter() {
                 id="email-address"
                 autoComplete="email"
                 required
-                className="w-full min-w-0 appearance-none rounded-md border-0 bg-white px-3 py-1.5 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:w-56 sm:text-sm sm:leading-6"
-                placeholder="Enter your email"
+                className="w-full min-w-0 appearance-none rounded-md border-0 bg-white px-3 py-1.5 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-600 sm:w-56 sm:text-sm sm:leading-6"
+                placeholder="Informne o seu email"
               />
               <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
                 <button
                   type="submit"
-                  className="flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="flex w-full items-center justify-center rounded-md bg-slate-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
                 >
-                  Subscribe
+                  Subscrever
                 </button>
               </div>
             </form>
@@ -214,14 +187,14 @@ export function FullFooter() {
           <div className="max-w-7xl mx-auto pt-8 md:flex md:items-center md:justify-between" >
             <div className="flex space-x-6 md:order-2">
               {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
+                <Link target="_blank" key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500" passHref>
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                </Link>
               ))}
             </div>
             <p className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0">
-              &copy; 2023 Webigus. All rights reserved.
+              &copy; 2023 Webigus. Todos os direitos reservados.
             </p>
           </div>
         </div>
