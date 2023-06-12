@@ -4,6 +4,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import classNames from 'classnames'
+import { Logo, Logomark } from '@/components/Logo'
 
 import brandLogo from '@/img/brand/logo-full.png'
 import brandLogoType from '@/img/brand/logo.png'
@@ -29,16 +30,16 @@ export default function Navbar() {
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 justify-between">
               <div className="flex flex-shrink-0 items-center">
-                <Image
-                  className="block h-8 w-auto lg:hidden"
-                  src={brandLogoType}
-                  alt="Webigus Logo"
-                />
-                <Image
-                  className="hidden h-10 w-auto lg:block"
-                  src={brandLogo}
-                  alt="Webigus Logo"
-                />
+
+              <div className='block h-8 w-auto lg:hidden'>
+                <Logomark className="h-10 w-auto" />
+               </div>
+
+               <div className='hidden h-10 w-auto lg:block'>
+                <Logo className="h-10 w-auto" />
+               </div>
+
+
               </div>
               <div className="hidden xl:flex flex-grow items-center justify-center">
                 <a className="text-sm py-1 px-2 rounded-xl bg-white font-medium text-gray-700 bg-opacity-70" href="/websites">Websites</a>

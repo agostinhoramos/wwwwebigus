@@ -1,6 +1,6 @@
 {
-  "name": "webigus-web",
-  "version": "0.1.2",
+  "name": "webigus.com",
+  "version": "0.1.5",
   "private": true,
   "scripts": {
     "dev": "next dev -p 1400",
