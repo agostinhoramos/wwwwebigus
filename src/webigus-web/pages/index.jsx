@@ -10,7 +10,6 @@ import { Faqs } from '@/components/Faqs'
 import { WebsitesSection } from '@/components/sections/WebsitesSection'
 import { PluginsSection } from '../components/sections/PluginsSection'
 
-// Data
 import { websites } from '@/staticdata/products/websites'
 import { plugins } from '@/staticdata/products/plugins'
 

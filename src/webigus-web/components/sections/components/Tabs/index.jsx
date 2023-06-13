@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const SectionTab = ({ title, desc, link }) => {
+const SectionTab = ({ title, desc, exploreAll, link }) => {
   return (
     <>
       <h2 className="mt-8 font-semibold text-primary-950">{title}</h2>
@@ -10,7 +10,7 @@ const SectionTab = ({ title, desc, link }) => {
           className="text-base font-semibold text-secondary-950 hover:text-secondary-700"
           href={link}
         >
-          {`Explore all ${title.toLowerCase()}`}{' '}
+          {`${exploreAll}`}{' '}
           <span aria-hidden="true">→</span>
         </Link>
       </div>

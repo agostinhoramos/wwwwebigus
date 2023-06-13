@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
-export function FakeBrowser() {
-    const [mainDomain, setMainDomain] = useState(null);
-    const [mainSiteTitle, setMainSiteTitle] = useState(null);
-    const [iframeSource, setIframeSource] = useState(null);
+import { names } from '@/staticdata'
 
-    const [widthSize, setWidthSize] = useState(null);
+export function FakeBrowser() {
+    const [mainDomain, setMainDomain] = useState(null)
+
+    const [widthSize, setWidthSize] = useState(null)
   
     useEffect(() => {
       setMainDomain('example.webigus.com');
-      setMainSiteTitle('Example - By Webigus');
       setWidthSize(1183)
     }, []);
 
@@ -25,9 +24,9 @@ export function FakeBrowser() {
       <div className="relative bg-grid-slate overflow-hidden" >
 
         <div className="flex items-start flex-none ml-[32rem] w-32">
-            <div className="flex flex-col items-center -ml-[0.19rem] mb-1"><div className="w-px h-[1.7rem] bg-gray-300"></div><div className="mt-[3px] w-[5px] h-[5px] shadow-sm rounded-full ring-1 bg-gray-300 ring-gray-300"></div></div><div className="ml-0.5 rounded cursor-pointer font-mono text-[0.625rem] leading-6 px-1.5 ring-1 ring-inset bg-slate-50 text-gray-300 ring-gray-300" onClick={()=>{setVirtualSize(510)}}>Mobile</div>
-            <div className="flex flex-col items-center ml-[12.75rem] mb-1"><div className="w-px h-[1.7rem] bg-gray-300"></div><div className="mt-[3px] w-[5px] h-[5px] shadow-sm rounded-full ring-1 bg-gray-300 ring-gray-300"></div></div><div className="ml-0.5 rounded cursor-pointer font-mono text-[0.625rem] leading-6 px-1.5 ring-1 ring-inset bg-slate-50 text-gray-300 ring-gray-300" onClick={()=>{setVirtualSize(766)}}>Tablet</div>
-            <div className="flex flex-col items-center ml-[22.75rem] mb-1"><div className="w-px h-[1.7rem] bg-primary-600"></div><div className="mt-[3px] w-[5px] h-[5px] shadow-sm rounded-full ring-1 bg-primary-700 ring-primary-600"></div></div><div className="-ml-[3.6rem] rounded cursor-pointer font-mono text-[0.625rem] leading-6 px-1.5 ring-1 ring-inset bg-slate-50 text-primary-600 ring-primary-600" onClick={()=>{setVirtualSize(1183)}}>Desktop</div>
+            <div className="flex flex-col items-center -ml-[0.19rem] mb-1"><div className="w-px h-[1.7rem] bg-gray-300"></div><div className="mt-[3px] w-[5px] h-[5px] shadow-sm rounded-full ring-1 bg-gray-300 ring-gray-300"></div></div><div className="ml-0.5 rounded cursor-pointer font-mono text-[0.625rem] leading-6 px-1.5 ring-1 ring-inset bg-slate-50 text-gray-300 ring-gray-300" onClick={()=>{setVirtualSize(510)}}>{ names.mobile }</div>
+            <div className="flex flex-col items-center ml-[12.75rem] mb-1"><div className="w-px h-[1.7rem] bg-gray-300"></div><div className="mt-[3px] w-[5px] h-[5px] shadow-sm rounded-full ring-1 bg-gray-300 ring-gray-300"></div></div><div className="ml-0.5 rounded cursor-pointer font-mono text-[0.625rem] leading-6 px-1.5 ring-1 ring-inset bg-slate-50 text-gray-300 ring-gray-300" onClick={()=>{setVirtualSize(766)}}>{ names.tablet }</div>
+            <div className="flex flex-col items-center ml-[22.75rem] mb-1"><div className="w-px h-[1.7rem] bg-primary-600"></div><div className="mt-[3px] w-[5px] h-[5px] shadow-sm rounded-full ring-1 bg-primary-700 ring-primary-600"></div></div><div className="-ml-[3.6rem] rounded cursor-pointer font-mono text-[0.625rem] leading-6 px-1.5 ring-1 ring-inset bg-slate-50 text-primary-600 ring-primary-600" onClick={()=>{setVirtualSize(1183)}}>{ names.desktop }</div>
         </div>
 
         <div
@@ -53,7 +52,7 @@ export function FakeBrowser() {
                     <path
                       d="m15 7-5 5 5 5"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>
@@ -67,7 +66,7 @@ export function FakeBrowser() {
                     <path
                       d="m10 7 5 5-5 5"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>

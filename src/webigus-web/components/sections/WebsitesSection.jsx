@@ -1,6 +1,8 @@
 import { SectionTab } from './components/Tabs'
 import { WebsiteCard } from '@/components/product/Card'
 
+import { section } from '@/staticdata'
+
 const WebsitesSection = ({ websites }) => {
   return (
     <>
@@ -10,8 +12,9 @@ const WebsitesSection = ({ websites }) => {
       >
         <div className="relative mx-auto max-w-7xl px-6 sm:px-8 xl:px-0">
           <SectionTab
-            title="Websites"
-            desc="Over 500+ professionally designed, fully responsive, expertly crafted component examples you can drop into your Tailwind projects and customize to your heart’s content."
+            title={section.website.title}
+            desc={section.website.desc}
+            exploreAll={section.website.exploreAll}
             link="/websites"
           />
           <div className="mt-8 grid grid-cols-1 gap-x-2 gap-y-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -45,7 +48,7 @@ const WebsitesSection = ({ websites }) => {
               href="/websites"
             >
               <span>
-                Show more...<span className="sr-only">, Application UI</span>
+                Show more...<span className="sr-only">, Website Section</span>
               </span>
             </a>
           </div>

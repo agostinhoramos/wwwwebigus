@@ -1,5 +1,8 @@
 import { FakeBrowser } from './component/FakeBrownser'
 
+import SmartButton from '@/components/elementary/SmartButton'
+import { name, hero, help } from '@/staticdata'
+
 const Hero = () => {
   return (
     <>
@@ -20,13 +23,8 @@ const Hero = () => {
         <div className="flex max-w-full flex-row pt-10">
           <div className="px-2 xl:basis-1/3">
             <div className="">
-              <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl text-center xl:text-left">
-                Alto Desempenho para Voar ainda{' '}
-                <span className="underline decoration-secondary-950">
-                  Mais Rápido
-                </span>{' '}
-                ✈️
-              </h1>
+              <div dangerouslySetInnerHTML={{ __html: hero.titleHtml }} 
+                className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl text-center xl:text-left" />
 
               <div className='w-full mt-4'>
                 <div className="flex justify-center xl:justify-start flex-wrap">
@@ -114,34 +112,33 @@ const Hero = () => {
               </div>
 
               <p className="mt-3 text-lg text-gray-600 text-center xl:text-left px-16 xl:px-0 hidden sm:block">
-                {
-                  'A sua parceira confiável para soluções profissionais de websites que impulsionam o seu negócio para o sucesso online. Criamos e desenvolvemos websites personalizados e de alta qualidade, utilizando as tecnologias mais recentes do mercado.'
-                }
+                { hero.desc }
               </p>
 
               <div className="mt-4 hidden sm:mt-8 sm:flex justify-center xl:justify-start">
                 <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                  {'Precisa de ajuda técnica? '}
+                  { help.doYouNeedTechnicalHelp + ' ' }
                   <a href="#" className="font-semibold text-secondary-950">
                     <span className="absolute inset-0" aria-hidden="true" />
-                    Podemos ajudar <span aria-hidden="true">&rarr;</span>
+                    { help.weCanHelp } <span aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
               </div>
 
               <div className="mt-8 flex gap-4 justify-center xl:justify-start">
-                <a
-                  className="inline-flex justify-center rounded-md bg-slate-700 px-4 py-2 text-sm font-semibold tracking-tight text-white shadow-sm"
-                  href="/websites"
-                >
-                  Ver Websites
-                </a>
-                <a
-                  className="inline-flex justify-center rounded-md bg-secondary-700 px-4 py-2 text-sm font-semibold tracking-tight text-white shadow-sm"
-                  href="/plugins"
-                >
-                  Ver Plugins
-                </a>
+
+                <SmartButton
+                  text = { hero.exploreAllWebsites }
+                  onClick={()=>{ location.href = "/websites" }}
+                  className="bg-slate-700 px-4 py-2 text-sm font-semibold tracking-tight"
+                  />
+
+                <SmartButton
+                  text = { hero.exploreAllPlugins }
+                  onClick={()=>{ location.href = "/plugins" }}
+                  className="bg-secondary-700 px-4 py-2 text-sm font-semibold tracking-tight"
+                  />
+
               </div>
 
             </div>

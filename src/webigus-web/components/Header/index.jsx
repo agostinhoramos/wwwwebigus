@@ -9,6 +9,8 @@ import { Logo, LogoMark } from '@/components/Logo'
 import brandLogo from '@/img/brand/logo-full.png'
 import brandLogoType from '@/img/brand/logo.png'
 
+import { names } from '@/staticdata'
+
 export function Header() {
   const navStyle = {
     transition: 'background .3s ease,box-shadow .3s ease',
@@ -42,9 +44,9 @@ export function Header() {
 
               </div>
               <div className="hidden xl:flex flex-grow items-center justify-center">
-                <a className="text-sm py-1 px-2 rounded-xl bg-white font-medium text-gray-700 bg-opacity-70" href="/websites">Websites</a>
+                <a className="text-sm py-1 px-2 rounded-xl bg-white font-medium text-gray-700 bg-opacity-70" href="/websites">{names.websites}</a>
                 <a className="text-sm ml-8 py-1 px-2 rounded-xl font-medium text-gray-700" href="/plugins">
-                  Plugins
+                  { names.plugins }
                 </a>
                 <button
                   type="button"
@@ -63,7 +65,7 @@ export function Header() {
               <div className="flex flex-shrink-0 items-center">
                 <a
                   className="-my-2.5 inline-flex justify-center rounded bg-white px-4 py-1.5 text-xs font-semibold text-slate-900"
-                  href="/all-access"
+                  href="/login"
                 >
                   <span>Log-in</span>
                 </a>
