@@ -53,8 +53,8 @@ export function FakeBrowser() {
                       d="m15 7-5 5 5 5"
                       stroke="currentColor"
                       strokeWidth="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                   </svg>
                   <svg
@@ -67,8 +67,8 @@ export function FakeBrowser() {
                       d="m10 7 5 5-5 5"
                       stroke="currentColor"
                       strokeWidth="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                   </svg>
                 </div>
@@ -80,7 +80,7 @@ export function FakeBrowser() {
                       className="mr-1.5 h-3.5 w-3.5 text-slate-300 dark:text-slate-500"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
                         clipRule="evenodd"
                       ></path>
@@ -98,8 +98,8 @@ export function FakeBrowser() {
                     <path
                       d="M12.5 6a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0ZM12.5 12a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0ZM18.5 6a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0ZM18.5 12a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0ZM6.5 6a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0ZM6.5 12a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0ZM12.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0ZM18.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0ZM6.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                   </svg>
                 </div>

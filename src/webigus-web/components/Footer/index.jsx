@@ -10,7 +10,7 @@ const bgStyle = {
   transition: 'background .3s ease,box-shadow .3s ease',
   boxShadow: 'inset 0 1px 0 #eaeaea',
   transform: 'translateZ(0)',
-  webkitBackdropFilter: 'saturate(180%) blur(5px)',
+  WebkitBackdropFilter: 'saturate(180%) blur(5px)',
   backdropFilter: 'saturate(180%) blur(5px)',
   background: 'hsla(0,0%,100%,.8)',
 }
