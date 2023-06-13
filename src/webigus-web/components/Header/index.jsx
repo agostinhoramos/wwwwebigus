@@ -6,10 +6,9 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
 import { Logo, LogoMark } from '@/components/Logo'
 
-import brandLogo from '@/img/brand/logo-full.png'
-import brandLogoType from '@/img/brand/logo.png'
+import SmartButton from '@/components/elementary/SmartButton'
 
-import { names } from '@/staticdata'
+import { names, system } from '@/staticdata'
 
 export function Header() {
   const navStyle = {
@@ -50,12 +49,12 @@ export function Header() {
                 </a>
               </div>
               <div className="flex flex-shrink-0 items-center">
-                <a
-                  className="-my-2.5 inline-flex justify-center rounded bg-white px-4 py-1.5 text-xs font-semibold text-slate-900"
-                  href="/login"
-                >
-                  <span>Log-in</span>
-                </a>
+                <SmartButton
+                    text = { system.login }
+                    onClick={()=>{location.href="/login"}}
+                    className={"bg-white text-slate-800"}
+                    />
+
               </div>
             </div>
           </div>

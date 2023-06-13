@@ -45,7 +45,7 @@ const PluginsSection = ({ plugins }) => {
           <div className="pointer-events-none relative z-10 -mt-5 flex justify-center">
             <a
               className="pointer-events-auto inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
-              href="/plugins"
+              href="/plugins?from=suggestion"
             >
               <span>
                 {section.showMore}...<span className="sr-only">, Plugin Section</span>
