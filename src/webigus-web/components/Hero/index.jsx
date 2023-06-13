@@ -2,11 +2,12 @@ import { FakeBrowser } from './component/FakeBrownser'
 
 import SmartButton from '@/components/elementary/SmartButton'
 import { name, hero, help } from '@/staticdata'
+import { BackgroundGradient } from './component/BackgroundGradient'
 
 const Hero = () => {
   return (
     <>
-      <div className="relative isolate xl:h-screen px-6 pt-14 lg:px-8">
+      <div className="relative isolate px-6 pt-14 lg:px-8 xl:h-screen">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -23,11 +24,13 @@ const Hero = () => {
         <div className="flex max-w-full flex-row pt-10">
           <div className="px-2 xl:basis-1/3">
             <div className="">
-              <div dangerouslySetInnerHTML={{ __html: hero.titleHtml }} 
-                className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl text-center xl:text-left" />
+              <div
+                dangerouslySetInnerHTML={{ __html: hero.titleHtml }}
+                className="text-center text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl xl:text-left"
+              />
 
-              <div className='w-full mt-4'>
-                <div className="flex justify-center xl:justify-start flex-wrap">
+              <div className="mt-4 w-full">
+                <div className="flex flex-wrap justify-center xl:justify-start">
                   <div className="flex items-center text-sm font-medium text-slate-500">
                     <svg
                       fill="none"
@@ -111,36 +114,37 @@ const Hero = () => {
                 </div>
               </div>
 
-              <p className="mt-3 text-lg text-gray-600 text-center xl:text-left px-16 xl:px-0 hidden sm:block">
-                { hero.desc }
+              <p className="mt-3 hidden px-16 text-center text-lg text-gray-600 sm:block xl:px-0 xl:text-left">
+                {hero.desc}
               </p>
 
-              <div className="mt-4 hidden sm:mt-8 sm:flex justify-center xl:justify-start">
+              <div className="mt-4 hidden justify-center sm:mt-8 sm:flex xl:justify-start">
                 <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                  { help.doYouNeedTechnicalHelp + ' ' }
+                  {help.doYouNeedTechnicalHelp + ' '}
                   <a href="#" className="font-semibold text-secondary-950">
                     <span className="absolute inset-0" aria-hidden="true" />
-                    { help.weCanHelp } <span aria-hidden="true">&rarr;</span>
+                    {help.weCanHelp} <span aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
               </div>
 
-              <div className="mt-8 flex gap-4 justify-center xl:justify-start">
-
+              <div className="mt-8 flex justify-center gap-4 xl:justify-start">
                 <SmartButton
-                  text = { hero.exploreAllWebsites }
-                  onClick={()=>{ location.href = "/websites" }}
+                  text={hero.exploreAllWebsites}
+                  onClick={() => {
+                    location.href = '/websites'
+                  }}
                   className="bg-slate-700 px-4 py-2 text-sm font-semibold tracking-tight"
-                  />
+                />
 
                 <SmartButton
-                  text = { hero.exploreAllPlugins }
-                  onClick={()=>{ location.href = "/plugins" }}
+                  text={hero.exploreAllPlugins}
+                  onClick={() => {
+                    location.href = '/plugins'
+                  }}
                   className="bg-secondary-700 px-4 py-2 text-sm font-semibold tracking-tight"
-                  />
-
+                />
               </div>
-
             </div>
           </div>
           <div className="hidden basis-2/3 px-2 xl:block">
@@ -149,7 +153,7 @@ const Hero = () => {
         </div>
 
         <div className="flex max-w-full flex-row pt-10">
-          <div className="hidden xl:flex xl:h-48 w-full items-stretch">
+          <div className="hidden w-full items-stretch xl:flex xl:h-48">
             <div className="mx-auto animate-bounce self-end">
               <svg
                 fill="#EBEBEB"
@@ -181,4 +185,30 @@ const Hero = () => {
   )
 }
 
-export { Hero }
+const WebsiteHero = () => {
+  return (
+    <>
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <BackgroundGradient>
+          <div className="flex max-w-full flex-row pt-10">
+            <div className="px-2 xl:basis-1/3">
+              <div className="">
+                <div
+                  dangerouslySetInnerHTML={{ __html: hero.titleHtml }}
+                  className="text-center text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl xl:text-left"
+                />
+                <div className="mt-4 w-full">
+                  <div className="flex flex-wrap justify-center xl:justify-start">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </BackgroundGradient>
+      </div>
+    </>
+  )
+}
+
+export { Hero, WebsiteHero }

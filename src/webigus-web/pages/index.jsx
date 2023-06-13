@@ -1,7 +1,7 @@
 import Head from 'next/head'
-
 import { useEffect } from 'react'
-import { BaseLayout } from '@/layouts/baseLayout'
+
+import { HomeLayout } from '@/layouts/homeLayout'
 import { Hero } from '@/components/Hero'
 import { Incentives } from '@/components/Incentives'
 import { Reviews } from '@/components/Reviews'
@@ -26,7 +26,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <BaseLayout>
+      <HomeLayout>
         <Hero />
 
         {websites?.length > 0 ? (
@@ -44,7 +44,7 @@ export default function Home() {
         <Incentives />
         <Reviews />
         <Faqs />
-      </BaseLayout>
+      </HomeLayout>
     </>
   )
 }
