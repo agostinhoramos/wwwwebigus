@@ -9,6 +9,8 @@ import {
   useTransform,
 } from 'framer-motion'
 
+import { Container } from '@/components/Container';
+
 const reviews = [
   {
     title: 'It really works.',
@@ -255,7 +257,7 @@ export function Reviews() {
       aria-labelledby="reviews-title"
       className="pt-10 sm:pt-16"
     >
-      <div className='mx-auto max-w-7xl px-6 sm:px-8 xl:px-0'>
+      <Container>
         <h2
           id="reviews-title"
           className="text-3xl font-medium tracking-tight text-gray-900 sm:text-center"
@@ -265,10 +267,8 @@ export function Reviews() {
         <p className="mt-2 text-lg text-gray-600 sm:text-center">
           {'Permitimos o aumento do património líquido anualmente.'}
         </p>
-
         <ReviewGrid />
-        
-      </div>
+      </Container>
     </section>
   )
 }

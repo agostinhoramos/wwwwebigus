@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { Logo, LogoMark } from '@/components/Logo'
 
+import { Container } from '@/components/Container';
+
 const bgStyle = {
   transition: "background .3s ease,box-shadow .3s ease",
   boxShadow: "inset 0 1px 0 #eaeaea",
@@ -14,11 +16,11 @@ export function SmallFooter() {
 
   return (
     <footer style={bgStyle}>
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-8 sm:py-10 lg:px-8">
+      <Container className="overflow-hidden px-6 py-8 sm:py-10 lg:px-8">
         <p className=" text-center text-xs leading-5 text-gray-500">
           &copy; 2023 WebiGus. All rights reserved.
         </p>
-      </div>
+      </Container>
     </footer>
   );
 }
@@ -100,7 +102,7 @@ export function Footer() {
         Footer
       </h2>
       <div className="mx-auto max-w-full px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-        <div className="max-w-7xl mx-auto xl:grid xl:grid-cols-3 xl:gap-8">
+        <Container className="xl:grid xl:grid-cols-3 xl:gap-8">
           <Logo className="h-10" />
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-1 md:gap-8">
@@ -144,9 +146,9 @@ export function Footer() {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
         <div className="border-t border-gray-900/10 mt-16 sm:mt-20 lg:mt-24">
-          <div className="max-w-7xl mx-auto pt-8 lg:flex lg:items-center lg:justify-between" >
+          <Container className="pt-8 lg:flex lg:items-center lg:justify-between" >
             <div>
               <h3 className="text-sm font-semibold leading-6 text-gray-900">Assine nossa newsletter</h3>
               <p className="mt-2 text-sm leading-6 text-gray-600">
@@ -175,10 +177,10 @@ export function Footer() {
                 </button>
               </div>
             </form>
-          </div>
+          </Container>
         </div>
         <div className="mt-8 border-t border-gray-900/10">
-          <div className="max-w-7xl mx-auto pt-8 md:flex md:items-center md:justify-between" >
+          <Container className="pt-8 md:flex md:items-center md:justify-between" >
             <div className="flex space-x-6 md:order-2">
               {navigation.social.map((item) => (
                 <Link target="_blank" key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500" passHref>
@@ -190,7 +192,7 @@ export function Footer() {
             <p className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0">
               &copy; 2023 Webigus. Todos os direitos reservados.
             </p>
-          </div>
+          </Container>
         </div>
       </div>
     </footer>
