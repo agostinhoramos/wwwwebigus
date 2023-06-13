@@ -2,26 +2,26 @@ import { useId } from "react";
 import Image from "next/image";
 import classNames from "classnames";
 
-import Navbar from "@/components/Navbar"
-import Hero from "@/components/Hero"
-import { SecondaryFeatures } from "@/components/SecondaryFeatures"
+import { Hero } from "@/components/Hero"
+import { Header } from "@/components/Header";
+import { Incentives } from "@/components/Incentives"
 import { Reviews } from "@/components/Reviews";
 import { Faqs } from "@/components/Faqs";
-import { FullFooter } from "@/components/Footer"
+import { Footer } from "@/components/Footer"
 
 export function BaseLayout({ children }) {
   return (
     <>
       <div>
-        <Navbar />
+        <Header />
         <Hero />
         <div >
             {children}
         </div>
-        <SecondaryFeatures />
+        <Incentives />
         <Reviews />
         <Faqs />
-        <FullFooter />
+        <Footer />
       </div>
     </>
   );

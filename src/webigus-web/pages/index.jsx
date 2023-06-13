@@ -4,7 +4,7 @@ import { Fragment, useCallback, useEffect, useState } from 'react'
 import { BaseLayout } from '@/layouts/baseLayout'
 import Link from 'next/link'
 
-import Card from '@/components/product/Card'
+import { WebsiteCard } from '@/components/product/Card'
 
 const websites = [
   {
@@ -279,202 +279,7 @@ const websites = [
         alt: 'Python',
       },
     ],
-  },
-  {
-    id: 7,
-    productName: 'Transmit',
-    productDesc:
-      "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-    href: '/website/3789261456732/transmit',
-    downloads: 325,
-    image: [
-      {
-        src: '/upload/external/website/transmit/preview-01.png',
-        alt: 'Transmit preview 01',
-      },
-      {
-        src: '/upload/external/website/transmit/preview-02.png',
-        alt: 'Transmit preview 02',
-      },
-      {
-        src: '/upload/external/website/transmit/preview-03.png',
-        alt: 'Transmit preview 03',
-      },
-    ],
-    technologies: [
-      {
-        id: 'nextjs',
-        src: 'nextjs.png',
-        alt: 'NextJS',
-      },
-      {
-        id: 'tailwindcss',
-        src: 'tailwindcss.png',
-        alt: 'Tailwindcss',
-      },
-      {
-        id: 'python',
-        src: 'python.png',
-        alt: 'Python',
-      },
-    ],
-  },
-  {
-    id: 7,
-    productName: 'Transmit',
-    productDesc:
-      "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-    href: '/website/3789261456732/transmit',
-    downloads: 325,
-    image: [
-      {
-        src: '/upload/external/website/transmit/preview-01.png',
-        alt: 'Transmit preview 01',
-      },
-      {
-        src: '/upload/external/website/transmit/preview-02.png',
-        alt: 'Transmit preview 02',
-      },
-      {
-        src: '/upload/external/website/transmit/preview-03.png',
-        alt: 'Transmit preview 03',
-      },
-    ],
-    technologies: [
-      {
-        id: 'nextjs',
-        src: 'nextjs.png',
-        alt: 'NextJS',
-      },
-      {
-        id: 'tailwindcss',
-        src: 'tailwindcss.png',
-        alt: 'Tailwindcss',
-      },
-      {
-        id: 'python',
-        src: 'python.png',
-        alt: 'Python',
-      },
-    ],
-  },
-  {
-    id: 7,
-    productName: 'Transmit',
-    productDesc:
-      "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-    href: '/website/3789261456732/transmit',
-    downloads: 325,
-    image: [
-      {
-        src: '/upload/external/website/transmit/preview-01.png',
-        alt: 'Transmit preview 01',
-      },
-      {
-        src: '/upload/external/website/transmit/preview-02.png',
-        alt: 'Transmit preview 02',
-      },
-      {
-        src: '/upload/external/website/transmit/preview-03.png',
-        alt: 'Transmit preview 03',
-      },
-    ],
-    technologies: [
-      {
-        id: 'nextjs',
-        src: 'nextjs.png',
-        alt: 'NextJS',
-      },
-      {
-        id: 'tailwindcss',
-        src: 'tailwindcss.png',
-        alt: 'Tailwindcss',
-      },
-      {
-        id: 'python',
-        src: 'python.png',
-        alt: 'Python',
-      },
-    ],
-  },
-  {
-    id: 7,
-    productName: 'Transmit',
-    productDesc:
-      "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-    href: '/website/3789261456732/transmit',
-    downloads: 325,
-    image: [
-      {
-        src: '/upload/external/website/transmit/preview-01.png',
-        alt: 'Transmit preview 01',
-      },
-      {
-        src: '/upload/external/website/transmit/preview-02.png',
-        alt: 'Transmit preview 02',
-      },
-      {
-        src: '/upload/external/website/transmit/preview-03.png',
-        alt: 'Transmit preview 03',
-      },
-    ],
-    technologies: [
-      {
-        id: 'nextjs',
-        src: 'nextjs.png',
-        alt: 'NextJS',
-      },
-      {
-        id: 'tailwindcss',
-        src: 'tailwindcss.png',
-        alt: 'Tailwindcss',
-      },
-      {
-        id: 'python',
-        src: 'python.png',
-        alt: 'Python',
-      },
-    ],
-  },
-  {
-    id: 7,
-    productName: 'Transmit',
-    productDesc:
-      "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-    href: '/website/3789261456732/transmit',
-    downloads: 325,
-    image: [
-      {
-        src: '/upload/external/website/transmit/preview-01.png',
-        alt: 'Transmit preview 01',
-      },
-      {
-        src: '/upload/external/website/transmit/preview-02.png',
-        alt: 'Transmit preview 02',
-      },
-      {
-        src: '/upload/external/website/transmit/preview-03.png',
-        alt: 'Transmit preview 03',
-      },
-    ],
-    technologies: [
-      {
-        id: 'nextjs',
-        src: 'nextjs.png',
-        alt: 'NextJS',
-      },
-      {
-        id: 'tailwindcss',
-        src: 'tailwindcss.png',
-        alt: 'Tailwindcss',
-      },
-      {
-        id: 'python',
-        src: 'python.png',
-        alt: 'Python',
-      },
-    ],
-  },
+  }
 ]
 
 const plugins = [
@@ -617,7 +422,7 @@ export default function Home() {
             />
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-2 lg:grid-cols-3 xl:grid-cols-4">
               {websites?.map((order, index) => (
-                <Card
+                <WebsiteCard
                   key={index}
                   id={order.id}
                   datetime={null}
@@ -668,7 +473,7 @@ export default function Home() {
             />
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-2 lg:grid-cols-3 xl:grid-cols-4">
               {plugins?.map((order, index) => (
-                <Card
+                <WebsiteCard
                   key={index}
                   id={order.id}
                   datetime={null}

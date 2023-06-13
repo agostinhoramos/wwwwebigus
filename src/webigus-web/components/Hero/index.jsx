@@ -129,15 +129,15 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div class="mt-8 flex gap-4 justify-center xl:justify-start">
+              <div className="mt-8 flex gap-4 justify-center xl:justify-start">
                 <a
-                  class="inline-flex justify-center rounded-md bg-slate-700 px-4 py-2 text-sm font-semibold tracking-tight text-white shadow-sm"
+                  className="inline-flex justify-center rounded-md bg-slate-700 px-4 py-2 text-sm font-semibold tracking-tight text-white shadow-sm"
                   href="/websites"
                 >
                   Ver Websites
                 </a>
                 <a
-                  class="inline-flex justify-center rounded-md bg-secondary-700 px-4 py-2 text-sm font-semibold tracking-tight text-white shadow-sm"
+                  className="inline-flex justify-center rounded-md bg-secondary-700 px-4 py-2 text-sm font-semibold tracking-tight text-white shadow-sm"
                   href="/plugins"
                 >
                   Ver Plugins
@@ -184,4 +184,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export { Hero }

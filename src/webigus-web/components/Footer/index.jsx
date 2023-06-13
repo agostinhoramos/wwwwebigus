@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Logo, LogoMark } from '@/components/Logo'
 
 const bgStyle = {
   transition: "background .3s ease,box-shadow .3s ease",
@@ -9,7 +10,7 @@ const bgStyle = {
   background: "hsla(0,0%,100%,.8)",
 };
 
-export function Footer() {
+export function SmallFooter() {
 
   return (
     <footer style={bgStyle}>
@@ -26,9 +27,6 @@ const navigation = {
   solutions: [
     { name: 'Desenvolvimento de Websites', href: '/about/websites' },
     { name: 'Desenvolvimento de Plugins', href: '/about/plugins' },
-    { name: 'Design de Interface', href: '/about/design_interface' },
-    { name: 'Otimização de Mecanismos de Busca (SEO)', href: '/about/seo' },
-    { name: 'Integração de Mídias Sociais', href: '/about/social_media' },
     { name: 'Manutenção e Suporte Técnico', href: '/about/technical_support' },
   ],
   company: [
@@ -95,7 +93,7 @@ const navigation = {
   ],
 }
 
-export function FullFooter() {
+export function Footer() {
   return (
     <footer style={bgStyle} aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
@@ -103,11 +101,7 @@ export function FullFooter() {
       </h2>
       <div className="mx-auto max-w-full px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="max-w-7xl mx-auto xl:grid xl:grid-cols-3 xl:gap-8">
-          <img
-            className="h-7"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt="Webigus"
-          />
+          <Logo className="h-10" />
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-1 md:gap-8">
               <div>

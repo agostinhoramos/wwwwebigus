@@ -9,7 +9,7 @@ import { Logo, LogoMark } from '@/components/Logo'
 import brandLogo from '@/img/brand/logo-full.png'
 import brandLogoType from '@/img/brand/logo.png'
 
-export default function Navbar() {
+export function Header() {
   const navStyle = {
     transition: 'background .3s ease,box-shadow .3s ease',
     boxShadow: 'inset 0 -1px 0 0 #eaeaea',
