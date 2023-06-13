@@ -170,14 +170,14 @@ export function Reviews() {
       className="pt-10 sm:pt-16"
     >
       <Container>
-        <h2
+        <div
           id="reviews-title"
           className="text-3xl font-medium tracking-tight text-gray-900 sm:text-center"
         >
           <div
             dangerouslySetInnerHTML={{ __html: reviewsSection.titleHtml }}
           ></div>
-        </h2>
+        </div>
         <p className="mt-2 text-lg text-gray-600 sm:text-center">
           {reviewsSection.desc}
         </p>
