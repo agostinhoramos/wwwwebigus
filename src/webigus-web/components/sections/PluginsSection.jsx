@@ -11,6 +11,39 @@ const PluginsSection = ({ plugins }) => {
         aria-labelledby="order-history-heading"
       >
         <div className="relative mx-auto max-w-7xl px-6 sm:px-8 xl:px-0">
+
+          <div className="mt-8 grid grid-cols-1 gap-x-2 gap-y-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {plugins?.map((order, index) => (
+              <PluginCard
+                key={index}
+                id={order.id}
+                datetime={null}
+                status={null}
+                productName={order.productName}
+                productDesc={order.productDesc}
+                link={order.href}
+                downloads={order.downloads}
+                imageSrc={order.image[0].src}
+                imageAlt={order.image[0].alt}
+              />
+            ))}
+          </div>
+
+        </div>
+
+      </div>
+    </>
+  )
+}
+
+const PluginsSectionShort = ({ plugins }) => {
+  return (
+    <>
+      <div
+        className="mx-auto max-w-2xl px-4 pb-24 sm:px-6 lg:max-w-full lg:px-8"
+        aria-labelledby="order-history-heading"
+      >
+        <div className="relative mx-auto max-w-7xl px-6 sm:px-8 xl:px-0">
           <SectionTab
             title={section.plugin.title}
             desc={section.plugin.desc}
@@ -60,4 +93,4 @@ const PluginsSection = ({ plugins }) => {
   )
 }
 
-export { PluginsSection }
+export { PluginsSectionShort, PluginsSection }

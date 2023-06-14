@@ -6,40 +6,49 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Container } from '@/components/Container'
 
 const sortOptions = [
-  { name: 'Most Popular', href: '#', current: true },
-  { name: 'Best Rating', href: '#', current: false },
-  { name: 'Newest', href: '#', current: false },
+  { name: 'Mais populares', href: '#', current: true },
+  { name: 'Melhor classificação', href: '#', current: false },
+  { name: 'Mais recente', href: '#', current: false },
 ]
 const filters = [
   {
     id: 'category',
-    name: 'Category',
+    name: 'Categorias',
     options: [
-      { value: 'new-arrivals', label: 'All New Arrivals', checked: false },
-      { value: 'tees', label: 'Tees', checked: false },
-      { value: 'objects', label: 'Objects', checked: true },
+      { value: 'all', label: 'Todos', checked: true },
+      { value: 'landing-pages', label: 'Landing Pages', checked: false },
+      { value: 'objects', label: 'Sites Instituicionais', checked: false },
+      { value: 'delivery', label: 'Delivery', checked: false },
+      { value: 'store', label: 'Lojas', checked: false },
     ],
   },
   {
-    id: 'color',
-    name: 'Color',
+    id: 'areas',
+    name: 'Areas',
     options: [
-      { value: 'white', label: 'White', checked: false },
-      { value: 'beige', label: 'Beige', checked: false },
-      { value: 'blue', label: 'Blue', checked: false },
-    ],
-  },
-  {
-    id: 'sizes',
-    name: 'Sizes',
-    options: [
-      { value: 's', label: 'S', checked: false },
-      { value: 'm', label: 'M', checked: false },
-      { value: 'l', label: 'L', checked: false },
+      { value: '', label: 'Transportes', checked: true },
+      { value: '', label: 'Sociedade e Pessoas', checked: false },
+      { value: '', label: 'Desporto', checked: false },
+      { value: '', label: 'Saúde', checked: false },
+      { value: '', label: 'Eletronicos', checked: false },
+      { value: '', label: 'Lar e Família', checked: false },
+      { value: '', label: 'Animais', checked: false },
+      { value: '', label: 'Arte e Cultura', checked: false },
+      { value: '', label: 'Design e Fotografia', checked: false },
+      { value: '', label: 'Moda e Beleza', checked: false },
+      { value: '', label: 'Comida e Restaurante', checked: false },
+      { value: '', label: 'Negócio', checked: false },
+      { value: '', label: 'Entretenimento', checked: false },
+      { value: '', label: 'Feriados, Presentes e Flores', checked: false },
+      { value: '', label: 'Prestadores de serviços', checked: false },
+      { value: '', label: 'Educação', checked: false },
+      { value: '', label: 'Imobiliária', checked: false },
+      { value: '', label: 'Marketing', checked: false },
+      { value: '', label: 'Notícia e Revista', checked: false },
     ],
   },
 ]
-const activeFilters = [{ value: 'django', label: 'Django' }, { value: 'tailwindcss', label: 'TailWind CSS' }, { value: 'doctor', label: 'Doutor' }]
+const activeFilters = [{ value: '', label: 'Negócio' }, { value: '', label: 'Transportes' }, { value: '', label: 'Comida e Restaurante' }]
 
 export function CategoryFilter() {
   const [open, setOpen] = useState(false)
@@ -73,7 +82,7 @@ export function CategoryFilter() {
             >
               <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl">
                 <div className="flex items-center justify-between px-4">
-                  <h2 className="text-lg font-medium text-gray-900">Filters</h2>
+                  <h2 className="text-lg font-medium text-gray-900">Filtros</h2>
                   <button
                     type="button"
                     className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400"
@@ -137,7 +146,7 @@ export function CategoryFilter() {
       {/* Filters */}
       <section aria-labelledby="filter-heading">
         <h2 id="filter-heading" className="sr-only">
-          Filters
+          Filtros
         </h2>
 
         <div className="border-b border-gray-200 bg-transparent pb-4">
@@ -145,7 +154,7 @@ export function CategoryFilter() {
             <Menu as="div" className="relative inline-block text-left">
               <div>
                 <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
-                  Sort
+                  Ordenar
                   <ChevronDownIcon
                     className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                     aria-hidden="true"
@@ -190,7 +199,7 @@ export function CategoryFilter() {
               className="inline-block text-sm font-medium text-gray-700 hover:text-gray-900 sm:hidden z-10"
               onClick={() => setOpen(true)}
             >
-              Filters
+              Filtros
             </button>
 
             <div className="hidden sm:block">
@@ -255,7 +264,7 @@ export function CategoryFilter() {
         <div className="bg-gray-100">
           <Container className="py-3 sm:flex sm:items-center">
             <h3 className="text-sm font-medium text-gray-500">
-              Filters
+              Filtros
               <span className="sr-only">, active</span>
             </h3>
 

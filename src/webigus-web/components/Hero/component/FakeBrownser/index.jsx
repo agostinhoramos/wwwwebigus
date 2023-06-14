@@ -13,9 +13,10 @@ export function FakeBrowser() {
       setWidthSize(1183)
     }, []);
 
+    // TODO - Enhancing functionality
     const setVirtualSize = (w) => {
-        console.log(w)
-        setWidthSize(w)
+        //console.log(w)
+        //setWidthSize(w)
     }
   
 

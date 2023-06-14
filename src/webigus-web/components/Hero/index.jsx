@@ -193,7 +193,7 @@ const WebsiteHero = () => {
           <Container>
             <div className="max-w-2xl py-32">
               <div>
-                <h1 class="text-base font-semibold leading-7 text-sky-500">Built by experienced developers</h1>
+                <h1 class="text-base font-semibold leading-7 text-sky-500">Criado por desenvolvedores experientes</h1>
                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                   Modelos de websites modernos, criados com Tailwind CSS
                 </h1>
@@ -206,4 +206,25 @@ const WebsiteHero = () => {
   )
 }
 
-export { Hero, WebsiteHero }
+const PluginHero = () => {
+  return (
+    <>
+      <div className="relative isolate">
+        <BackgroundGradient>
+          <Container>
+            <div className="max-w-2xl py-32">
+              <div>
+                <h1 class="text-base font-semibold leading-7 text-secondary-500">Criado por desenvolvedores experientes</h1>
+                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  Melhores plugins, extensões e módulos premium para o seu site
+                </h1>
+              </div>
+            </div>
+          </Container>
+        </BackgroundGradient>
+      </div>
+    </>
+  )
+}
+
+export { Hero, WebsiteHero, PluginHero }

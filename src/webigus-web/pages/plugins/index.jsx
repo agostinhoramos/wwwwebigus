@@ -3,13 +3,13 @@ import { useEffect } from 'react'
 
 import { BaseLayout } from '@/layouts/baseLayout'
 
-import { WebsiteHero as Hero } from '@/components/Hero'
-import { WebsitesSection } from '@/components/sections/WebsitesSection'
+import { PluginHero as Hero } from '@/components/Hero'
+import { PluginsSection } from '@/components/sections/PluginsSection'
 import { CategoryFilter } from '@/components/CategoryFilter'
 
-import { websites } from '@/staticdata/products/websites'
+import { plugins } from '@/staticdata/products/plugins'
 
-const Websites = () => {
+const Plugins = () => {
     
     useEffect(()=>{
         console.log("Hi")
@@ -18,8 +18,8 @@ const Websites = () => {
     return (
         <>
             <Head>
-                <title>WebiGus | Websites</title>
-                <meta name="description" content="Webigus Access" />
+                <title>WebiGus | Plugins</title>
+                <meta name="description" content="Webigus" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -29,9 +29,9 @@ const Websites = () => {
 
                 <CategoryFilter />
 
-                {websites?.length > 0 ? (
+                {plugins?.length > 0 ? (
                 <>
-                    <WebsitesSection websites={websites} />
+                    <PluginsSection plugins={plugins} />
                 </>
                 ) : null}
 
@@ -40,4 +40,4 @@ const Websites = () => {
     )
 }
 
-export default Websites;
+export default Plugins;

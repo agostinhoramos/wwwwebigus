@@ -7,7 +7,7 @@ import { Incentives } from '@/components/Incentives'
 import { Reviews } from '@/components/Reviews'
 import { Faqs } from '@/components/Faqs'
 
-import { WebsitesSection } from '@/components/sections/WebsitesSection'
+import { WebsitesSectionShort as WebsitesSection } from '@/components/sections/WebsitesSection'
 import { PluginsSection } from '../components/sections/PluginsSection'
 
 import { websites } from '@/staticdata/products/websites'
