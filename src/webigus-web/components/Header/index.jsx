@@ -1,11 +1,11 @@
 import { Fragment } from 'react'
 import Image from 'next/image'
+
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import classNames from 'classnames'
 import { Logo, LogoMark } from '@/components/Logo'
-
 import SmartButton from '@/components/elementary/SmartButton'
 
 import { names, system } from '@/staticdata'
@@ -37,7 +37,7 @@ export function Header() {
                </div>
 
                <div className='hidden h-10 w-auto lg:block'>
-                <Logo className="h-10 w-auto" />
+                <Logo className="h-10 w-auto" href="/" />
                </div>
 
 
@@ -51,10 +51,9 @@ export function Header() {
               <div className="flex flex-shrink-0 items-center">
                 <SmartButton
                     text = { system.login }
-                    onClick={()=>{location.href="/login"}}
-                    className={"bg-white text-slate-800"}
+                    href="/login"
+                    className={"bg-slate-700"}
                     />
-
               </div>
             </div>
           </div>

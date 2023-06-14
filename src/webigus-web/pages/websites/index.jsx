@@ -5,6 +5,7 @@ import { BaseLayout } from '@/layouts/baseLayout'
 
 import { WebsiteHero as Hero } from '@/components/Hero'
 import { WebsitesSection } from '@/components/sections/WebsitesSection'
+import { CategoryFilter } from '@/components/CategoryFilter'
 
 import { websites } from '@/staticdata/products/websites'
 
@@ -20,6 +21,8 @@ const Websites = () => {
 
             <BaseLayout>
                 <Hero />
+
+                <CategoryFilter />
 
                 {websites?.length > 0 ? (
                 <>

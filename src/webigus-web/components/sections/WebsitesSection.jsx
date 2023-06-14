@@ -1,5 +1,6 @@
 import { SectionTab } from './components/Tabs'
 import { WebsiteCard } from '@/components/product/Card'
+import { SmartButton } from '@/components/elementary/SmartButton'
 
 import { section } from '@/staticdata'
 
@@ -44,7 +45,7 @@ const WebsitesSection = ({ websites }) => {
         {websites?.length > 10 ? (
           <div className="pointer-events-none relative z-10 -mt-5 flex justify-center">
             <a
-              className="pointer-events-auto inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
+              className="pointer-events-auto inline-flex justify-center rounded-lg bg-slate-700 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
               href="/websites?from=suggestion"
             >
               <span>

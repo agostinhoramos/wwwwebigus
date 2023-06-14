@@ -1,8 +1,11 @@
 import { FakeBrowser } from './component/FakeBrownser'
 
 import SmartButton from '@/components/elementary/SmartButton'
-import { name, hero, help } from '@/staticdata'
+
 import { BackgroundGradient } from './component/BackgroundGradient'
+import { Container } from '@/components/Container'
+
+import { name, hero, help } from '@/staticdata'
 
 const Hero = () => {
   return (
@@ -131,20 +134,17 @@ const Hero = () => {
               <div className="mt-8 flex justify-center gap-4 xl:justify-start">
                 <SmartButton
                   text={hero.exploreAllWebsites}
-                  onClick={() => {
-                    location.href = '/websites'
-                  }}
+                  href="/websites"
                   className="bg-slate-700 px-4 py-2 text-sm font-semibold tracking-tight"
                 />
 
                 <SmartButton
                   text={hero.exploreAllPlugins}
-                  onClick={() => {
-                    location.href = '/plugins'
-                  }}
+                  href="/plugins"
                   className="bg-secondary-700 px-4 py-2 text-sm font-semibold tracking-tight"
                 />
               </div>
+              <div className={'underline decoration-secondary-950'} />
             </div>
           </div>
           <div className="hidden basis-2/3 px-2 xl:block">
@@ -188,23 +188,18 @@ const Hero = () => {
 const WebsiteHero = () => {
   return (
     <>
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <div className="relative isolate">
         <BackgroundGradient>
-          <div className="flex max-w-full flex-row pt-10">
-            <div className="px-2 xl:basis-1/3">
-              <div className="">
-                <div
-                  dangerouslySetInnerHTML={{ __html: hero.titleHtml }}
-                  className="text-center text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl xl:text-left"
-                />
-                <div className="mt-4 w-full">
-                  <div className="flex flex-wrap justify-center xl:justify-start">
-                    
-                  </div>
-                </div>
+          <Container>
+            <div className="max-w-2xl py-32">
+              <div>
+                <h1 class="text-base font-semibold leading-7 text-sky-500">Built by experienced developers</h1>
+                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  Modelos de websites modernos, criados com Tailwind CSS
+                </h1>
               </div>
             </div>
-          </div>
+          </Container>
         </BackgroundGradient>
       </div>
     </>
