@@ -10,9 +10,9 @@ const SmartButton = ({ text, disabled, href, onClick, className }) => {
     useEffect(() => {
 
         if( disabled == true ){
-            setButtonStyle("bg-gray-200 text-white cursor-default")
+            setButtonStyle("bg-gray-200 cursor-default")
         }else{
-            setButtonStyle("bg-primary-900 text-white hover:opacity-90 cursor-pointer")
+            setButtonStyle("bg-primary-900 hover:opacity-90 cursor-pointer")
         }
 
     }, [disabled]);

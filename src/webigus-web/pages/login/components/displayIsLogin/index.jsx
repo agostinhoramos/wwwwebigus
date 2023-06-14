@@ -80,6 +80,7 @@ const IsLogin = ({ textUserId, setTextUserId, actionEvent }) => {
                 <SmartButton
                     text = {"Continuar"}
                     onClick={()=>{handleWithContinueButton()}}
+                    className="text-white"
                     />
 
                 <div className="inline-flex items-center justify-center w-full">

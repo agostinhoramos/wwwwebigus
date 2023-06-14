@@ -100,6 +100,7 @@ const Login = ({ textUserId, setTextUserId, textPassword, setTextPassword, conte
                 <SmartButton 
                     text={"Iniciar Sessão"}
                     onClick={()=>{handleWithLoginButton()}}
+                    className="text-white"
                     />
 
                 <div className="text-sm mb-2 mt-4" >

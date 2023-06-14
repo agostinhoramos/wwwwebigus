@@ -31,7 +31,7 @@ const Newsletter = ({}) => {
                 <SmartButton
                         text = { newsletter.button.text }
                         onClick={()=>{}}
-                        className="bg-slate-700 px-3 py-[0.9rem]"
+                        className="bg-slate-700 text-white px-3 py-[0.9rem]"
                         />
                 </div>
                 </form>

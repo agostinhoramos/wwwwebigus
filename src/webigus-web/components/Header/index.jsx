@@ -42,7 +42,7 @@ export function Header() {
 
   if(!isScrolled){
     navStyle = {
-      marginTop: "10px"
+      marginTop: "10px",
     }
   }
 
@@ -98,7 +98,7 @@ export function Header() {
                 <SmartButton
                   text={system.login}
                   href="/login"
-                  className={'border bg-transparent text-slate-700  text-xs uppercase'}
+                  className={'border bg-transparent text-slate-900  text-xs uppercase'}
                 />
               </div>
             </div>

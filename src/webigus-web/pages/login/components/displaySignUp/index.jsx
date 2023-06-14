@@ -236,6 +236,7 @@ const SignUp = ({ textFName, setTextFName, textLName, setTextLName, textUserId, 
                         text={"Registe-se"}
                         onClick={()=>{handleWithSignUpButton()}}
                         disabled={(!isValidFName || !isValidLName || !isValidUserId || !isValidPassword)}
+                        className="text-white"
                         />
                 </div>
 

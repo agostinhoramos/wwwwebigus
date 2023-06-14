@@ -86,6 +86,7 @@ const Recover = ({ textUserId, setTextUserId, setDisplayView, actionEvent }) => 
                     <SmartButton 
                         text = {"Enviar link de redefinição"}
                         onClick={()=>{handleWithRecoverButton()}}
+                        className="text-white"
                         />
                 </div>
 
