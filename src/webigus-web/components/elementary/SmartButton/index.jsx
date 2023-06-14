@@ -12,7 +12,7 @@ const SmartButton = ({ text, disabled, href, onClick, className }) => {
         if( disabled == true ){
             setButtonStyle("bg-gray-200 text-white cursor-default")
         }else{
-            setButtonStyle("bg-primary-900 text-white hover:opacity-90 focus:ring-primary-300 cursor-pointer")
+            setButtonStyle("bg-primary-900 text-white hover:opacity-90 cursor-pointer")
         }
 
     }, [disabled]);
@@ -28,7 +28,7 @@ const SmartButton = ({ text, disabled, href, onClick, className }) => {
             <div className=''>
                 <button 
                     type="button" 
-                    className={classNames("w-full focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 focus:outline-none", buttonStyle, className)}
+                    className={classNames("w-full font-medium rounded-lg text-sm px-5 py-2.5 mr-2 focus:outline-none", buttonStyle, className)}
                     onClick={onClick?onClick:()=>{}}
                     disabled={disabled}
                     >{ text }</button>

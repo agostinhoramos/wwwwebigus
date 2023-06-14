@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -14,7 +14,10 @@ import { names, system } from '@/staticdata'
 
 export function Header() {
   
-  const navStyle = {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  let navStyle = {
     transition: 'background .3s ease,box-shadow .3s ease',
     boxShadow: 'inset 0 -1px 0 0 #eaeaea',
     transform: 'translateZ(0)',
@@ -29,7 +32,7 @@ export function Header() {
     const selected = router.pathname === href ? true:false
     return (
       <Link
-        className={classNames("rounded-xl bg-opacity-70 px-2 py-1 mr-3", selected?"bg-slate-700 text-white":"text-slate-900 hover:text-slate-500")}
+        className={classNames("text-slate-900 border-slate-700 bg-opacity-70 px-2 py-1 mr-3", selected?"border-b-2":"hover:border-transparent hover:border-b-2")}
         href={href}
       >
         {text}
@@ -37,12 +40,42 @@ export function Header() {
     )
   }
 
+  if(!isScrolled){
+    navStyle = {
+      marginTop: "10px"
+    }
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      const pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollThreshold = pageHeight * 0.25;
+
+      if (scrollPosition > 0) {
+        setIsScrolled(true)
+      }
+      if (scrollPosition > scrollThreshold) {
+        setShowNavbar(true)
+      } else {
+        setIsScrolled(false)
+        setShowNavbar(false)
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    
     <Disclosure
       as="nav"
       style={navStyle}
-      className="fixed left-0 right-0 top-0 uppercase z-40"
+      className={classNames("uppercase z-40", showNavbar?"fixed left-0 right-0 top-0 ":"relative bg-transparent")}
     >
       {({ open }) => (
         <>
