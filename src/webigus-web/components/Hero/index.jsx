@@ -1,10 +1,9 @@
+import { useState, useEffect } from 'react'
+import { Image } from '@nextui-org/react';
 import { FakeBrowser } from './component/FakeBrownser'
-
 import SmartButton from '@/components/elementary/SmartButton'
-
 import { BackgroundGradient } from './component/BackgroundGradient'
 import { Container } from '@/components/Container'
-
 import { name, hero, help } from '@/staticdata'
 
 const Hero = () => {
@@ -135,13 +134,13 @@ const Hero = () => {
                 <SmartButton
                   text={hero.exploreAllWebsites}
                   href="/websites"
-                  className="bg-slate-700 text-white px-4 py-2 text-sm font-semibold tracking-tight"
+                  className="bg-slate-700 px-4 py-2 text-sm font-semibold tracking-tight text-white"
                 />
 
                 <SmartButton
                   text={hero.exploreAllPlugins}
                   href="/plugins"
-                  className="bg-secondary-700 text-white px-4 py-2 text-sm font-semibold tracking-tight"
+                  className="bg-secondary-700 px-4 py-2 text-sm font-semibold tracking-tight text-white"
                 />
               </div>
               <div className={'underline decoration-secondary-950'} />
@@ -185,21 +184,49 @@ const Hero = () => {
   )
 }
 
-const WebsiteHero = () => {
+const WebsiteHero = ({ data }) => {
   return (
     <>
       <div className="relative isolate">
         <BackgroundGradient>
-          <Container>
-            <div className="max-w-2xl py-32">
-              <div>
-                <h1 class="text-base font-semibold leading-7 text-sky-500">Criado por desenvolvedores experientes</h1>
-                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  Modelos de websites modernos, criados com Tailwind CSS
-                </h1>
+          {data ? (
+            <Container>
+              <div className="py-32">
+                <div className="flex flex-row">
+                  <div className="basis-1/3">
+                    <h1 className="text-base font-semibold leading-7 text-sky-500">
+                    SaaS marketing website
+                    </h1>
+                    <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                      { data?.name }
+                    </h1>
+                  </div>
+                  <div className="basis-2/3 ">
+                  <Image 
+                  showSkeleton
+                  maxDelay={10000}
+                  src={require("@/img/upload/website/salient/banner.png").default.src} width="1600" height="1280" className="relative z-20 -mb-36 aspect-[853/682] max-w-[853px] rounded-xl bg-slate-200 shadow-xl shadow-black/5 ring-1 ring-slate-900/5 sm:-mb-16 lg:-mb-8 xl:-mb-16" 
+                  alt="Default Image"
+                  objectFit="cover"
+                  />
+                  </div>
+                </div>
               </div>
-            </div>
-          </Container>
+            </Container>
+          ) : (
+            <Container>
+              <div className="max-w-2xl py-32">
+                <div>
+                  <h1 className="text-base font-semibold leading-7 text-sky-500">
+                    Criado por desenvolvedores experientes
+                  </h1>
+                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    Modelos de websites modernos, criados com Tailwind CSS
+                  </h1>
+                </div>
+              </div>
+            </Container>
+          )}
         </BackgroundGradient>
       </div>
     </>
@@ -214,7 +241,9 @@ const PluginHero = () => {
           <Container>
             <div className="max-w-2xl py-32">
               <div>
-                <h1 class="text-base font-semibold leading-7 text-secondary-500">Criado por desenvolvedores experientes</h1>
+                <h1 className="text-base font-semibold leading-7 text-secondary-500">
+                  Criado por desenvolvedores experientes
+                </h1>
                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                   Melhores plugins, extensões e módulos premium para o seu site
                 </h1>

@@ -4,7 +4,7 @@ const websites = [
       productName: 'Commit',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/commit',
+      href: '/website/commit',
       downloads: 325,
       image: [
         {
@@ -43,7 +43,7 @@ const websites = [
       productName: 'Pocket',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/pocket',
+      href: '/website/pocket',
       downloads: 92,
       image: [
         {
@@ -82,7 +82,7 @@ const websites = [
       productName: 'Protocol',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/protocol',
+      href: '/website/protocol',
       downloads: 134,
       image: [
         {
@@ -121,7 +121,7 @@ const websites = [
       productName: 'Salient',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/salient',
+      href: '/website/salient',
       downloads: 2,
       image: [
         {
@@ -160,7 +160,7 @@ const websites = [
       productName: 'Spotlight',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/spotlight',
+      href: '/website/spotlight',
       downloads: 1,
       image: [
         {
@@ -199,7 +199,7 @@ const websites = [
       productName: 'Syntax',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/syntax',
+      href: '/website/syntax',
       downloads: 439,
       image: [
         {
@@ -238,7 +238,7 @@ const websites = [
       productName: 'Transmit',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/transmit',
+      href: '/website/transmit',
       downloads: 325,
       image: [
         {
@@ -277,7 +277,7 @@ const websites = [
       productName: 'Transmit',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/transmit',
+      href: '/website/transmit',
       downloads: 325,
       image: [
         {
@@ -316,7 +316,7 @@ const websites = [
       productName: 'Transmit',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/transmit',
+      href: '/website/transmit',
       downloads: 325,
       image: [
         {
@@ -355,7 +355,7 @@ const websites = [
       productName: 'Transmit',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/transmit',
+      href: '/website/transmit',
       downloads: 325,
       image: [
         {
@@ -394,7 +394,7 @@ const websites = [
       productName: 'Transmit',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/transmit',
+      href: '/website/transmit',
       downloads: 325,
       image: [
         {
@@ -433,7 +433,7 @@ const websites = [
       productName: 'Transmit',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/transmit',
+      href: '/website/transmit',
       downloads: 325,
       image: [
         {
@@ -472,7 +472,7 @@ const websites = [
       productName: 'Transmit',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/transmit',
+      href: '/website/transmit',
       downloads: 325,
       image: [
         {
@@ -511,7 +511,7 @@ const websites = [
       productName: 'Transmit',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/transmit',
+      href: '/website/transmit',
       downloads: 325,
       image: [
         {
@@ -550,7 +550,7 @@ const websites = [
       productName: 'Transmit',
       productDesc:
         "In case you haven't heard, building in public is the way all the coolest makers do marketing these days. The coolest of the cool do it with Commit, our beautiful one-page changelog template.",
-      href: '/website/3789261456732/transmit',
+      href: '/website/transmit',
       downloads: 325,
       image: [
         {
