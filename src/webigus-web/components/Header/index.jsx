@@ -13,7 +13,7 @@ import SmartButton from '@/components/elementary/SmartButton'
 import { names, system } from '@/staticdata'
 
 export function Header({ defaultScroll }) {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [showNavbar, setShowNavbar] = useState(false)
   const defaultScrollThreshold = defaultScroll?defaultScroll:1200
 
@@ -34,32 +34,29 @@ export function Header({ defaultScroll }) {
     )
   }
 
-  const [scrollPosition, setScrollPosition] = useState(0)
-  const { scrollY } = useViewportScroll()
-
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition =
-        window.pageYOffset || document.documentElement.scrollTop
-      const pageHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight
-      const scrollThreshold = pageHeight * defaultScrollThreshold
+      const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
 
-      if (scrollPosition > defaultScrollThreshold) {
-        setShowNavbar(true)
+      if(currentScrollPos > defaultScrollThreshold){
+        if (prevScrollPos < currentScrollPos) {
+          setShowNavbar(true); // Scrolling up
+        }else{
+          setShowNavbar(false); // Scrolling down
+        }
       } else {
-        setIsScrolled(false)
-        setShowNavbar(false)
+        setShowNavbar(false); // Scrolling down
       }
-    }
 
-    window.addEventListener('scroll', handleScroll)
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]);
 
   const Nav = ({ className, ...props }) => {
     return (

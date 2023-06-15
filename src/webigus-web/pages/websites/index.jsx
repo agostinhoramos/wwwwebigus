@@ -24,7 +24,7 @@ const Websites = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <BaseLayout defaultScroll={700}>
+            <BaseLayout defaultScroll={700} >
                 <Hero />
 
                 <CategoryFilter />
