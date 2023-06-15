@@ -160,9 +160,9 @@ const WebsiteDetail = ({ website }) => {
                         Cor primaria
                       </RadioGroup.Label>
                       <div className="mt-4 flex items-center space-x-3">
-                        {colors.map((color) => (
+                        {colors.map((color, index) => (
                           <RadioGroup.Option
-                            key={color.name}
+                            key={index}
                             value={color}
                             className={({ active, checked }) =>
                               classNames(
@@ -197,9 +197,9 @@ const WebsiteDetail = ({ website }) => {
                         Cor secundaria
                       </RadioGroup.Label>
                       <div className="mt-4 flex items-center space-x-3">
-                        {colors.map((color) => (
+                        {colors.map((color, index) => (
                           <RadioGroup.Option
-                            key={color.name}
+                            key={index}
                             value={color}
                             className={({ active, checked }) =>
                               classNames(

@@ -95,8 +95,8 @@ export function CategoryFilter() {
 
                 {/* Filters */}
                 <form className="mt-4">
-                  {filters.map((section) => (
-                    <Disclosure as="div" key={section.name} className="border-t border-gray-200 px-4 py-6">
+                  {filters.map((section, index) => (
+                    <Disclosure as="div" key={index} className="border-t border-gray-200 px-4 py-6">
                       {({ open }) => (
                         <>
                           <h3 className="-mx-2 -my-3 flow-root">
@@ -113,7 +113,7 @@ export function CategoryFilter() {
                           <Disclosure.Panel className="pt-6">
                             <div className="space-y-6">
                               {section.options.map((option, optionIdx) => (
-                                <div key={option.value} className="flex items-center">
+                                <div key={optionIdx} className="flex items-center">
                                   <input
                                     id={`filter-mobile-${section.id}-${optionIdx}`}
                                     name={`${section.id}[]`}
@@ -173,8 +173,8 @@ export function CategoryFilter() {
               >
                 <Menu.Items className="absolute left-0 z-10 mt-2 w-40 origin-top-left rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
                   <div className="py-1">
-                    {sortOptions.map((option) => (
-                      <Menu.Item key={option.name}>
+                    {sortOptions.map((option, index) => (
+                      <Menu.Item key={index}>
                         {({ active }) => (
                           <a
                             href={option.href}
@@ -206,7 +206,7 @@ export function CategoryFilter() {
               <div className="flow-root">
                 <Popover.Group className="-mx-4 flex items-center divide-x divide-gray-200">
                   {filters.map((section, sectionIdx) => (
-                    <Popover key={section.name} className="relative inline-block px-4 text-left">
+                    <Popover key={sectionIdx} className="relative inline-block px-4 text-left">
                       <Popover.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
                         <span>{section.name}</span>
                         {sectionIdx === 0 ? (
@@ -232,7 +232,7 @@ export function CategoryFilter() {
                         <Popover.Panel className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white p-4 shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <form className="space-y-4">
                             {section.options.map((option, optionIdx) => (
-                              <div key={option.value} className="flex items-center">
+                              <div key={optionIdx} className="flex items-center">
                                 <input
                                   id={`filter-${section.id}-${optionIdx}`}
                                   name={`${section.id}[]`}
@@ -272,9 +272,9 @@ export function CategoryFilter() {
 
             <div className="mt-2 sm:ml-4 sm:mt-0">
               <div className="-m-1 flex flex-wrap items-center">
-                {activeFilters.map((activeFilter) => (
+                {activeFilters.map((activeFilter, index) => (
                   <span
-                    key={activeFilter.value}
+                    key={index}
                     className="m-1 inline-flex items-center rounded-full border border-gray-200 bg-white py-1.5 pl-3 pr-2 text-sm font-medium text-gray-900"
                   >
                     <span>{activeFilter.label}</span>

@@ -5,11 +5,11 @@ import classNames from "classnames";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer"
 
-export function BaseLayout({ children }) {
+export function BaseLayout({ children, defaultScroll }) {
   return (
     <>
       <div>
-        <Header />
+        <Header defaultScroll={defaultScroll} />
         <div >
             {children}
         </div>
