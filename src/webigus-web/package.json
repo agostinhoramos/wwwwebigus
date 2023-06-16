@@ -10,6 +10,9 @@
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
     "@nextui-org/react": "^1.0.0-beta.13",

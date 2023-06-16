@@ -24,20 +24,41 @@ export const authOptions = {
   secret: process.env.AUTH_SECRET,
   callbacks: {
     async signIn(user, account, profile) {
-      console.log( user, account, profile )
+      //console.log(user, account, profile)
 
-      // obj = await api.post(`auth/register`, {
-      //   "first_name" : "Adriana",
-      //   "last_name" : "Pereira Santos",
-      //   "email" : "a2@gmail.com",
-      //   "username" : "a2",
-      //   "auth_provider": "google",
-      //   "photo" : null
-      // });
+      const provider = user.account.provider
+      const picture = user.profile.picture
+      const email = user.profile.email
+      const email_verified = user.profile.email_verified
+      const locale = user.profile.locale
+      const given_name = user.profile.given_name
+      const family_name = user.profile.family_name
 
-      console.log( "OBJ", user )
+      if( !email_verified ){
+        return "/login"
+      }
 
-      // Redirect to a specific page after successful sign-in
+      try {
+        const obj = await api.post(`auth/register`, {
+          "first_name": given_name,
+          "last_name": family_name,
+          "email": email,
+          "username": email,
+          "auth_provider": provider,
+          "photo": picture
+        });
+
+        if (obj.data && obj.data.error && obj.data.error[0] === 'user_already_exist') {
+          return "/login";
+        } else {
+          console.log("Registration successful");
+        }
+
+      } catch (error) {
+        console.error("Error occurred:", error);
+        return "/login"
+      }
+      
       return "/";
     },
   },
