@@ -15,11 +15,11 @@ const Hero = () => {
             <div>
               <div
                 dangerouslySetInnerHTML={{ __html: hero.titleHtml }}
-                className="text-center text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl xl:text-left"
+                className="text-center text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl sm:text-left"
               />
 
               <div className="mt-4 w-full">
-                <div className="flex flex-wrap justify-center xl:justify-start">
+                <div className="flex flex-wrap justify-center sm:justify-start">
                   <div className="flex items-center text-sm font-medium text-slate-500">
                     <svg
                       fill="none"
@@ -103,11 +103,11 @@ const Hero = () => {
                 </div>
               </div>
 
-              <p className="mt-3 hidden px-16 text-center text-lg text-gray-600 sm:block xl:px-0 xl:text-left">
+              <p className="mt-3 hidden px-16 text-center text-lg text-gray-600 sm:block sm:px-0 sm:text-left">
                 {hero.desc}
               </p>
 
-              <div className="mt-4 hidden justify-center sm:mt-8 sm:flex xl:justify-start">
+              <div className="mt-4 hidden justify-center sm:mt-8 sm:flex sm:justify-start">
                 <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                   {help.doYouNeedTechnicalHelp + ' '}
                   <a href="#" className="font-semibold text-secondary-950">
@@ -117,7 +117,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="mt-8 flex justify-center gap-4 xl:justify-start">
+              <div className="mt-8 flex justify-center gap-4 sm:justify-start">
                 <SmartButton
                   text={hero.exploreAllWebsites}
                   href="/websites"

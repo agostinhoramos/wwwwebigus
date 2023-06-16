@@ -12,10 +12,9 @@ import SmartButton from '@/components/elementary/SmartButton'
 
 import { names, system } from '@/staticdata'
 
-export function Header({ defaultScroll }) {
+export function Header({  }) {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [showNavbar, setShowNavbar] = useState(false)
-  const defaultScrollThreshold = defaultScroll?defaultScroll:1200
 
   const router = useRouter()
 
@@ -38,7 +37,8 @@ export function Header({ defaultScroll }) {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
 
-      if(currentScrollPos > defaultScrollThreshold){
+      const anchorPosition = document.getElementById('navbar-anchor')?.offsetTop;
+      if(currentScrollPos > anchorPosition){
         if (prevScrollPos < currentScrollPos) {
           setShowNavbar(true); // Scrolling up
         }else{
@@ -65,7 +65,7 @@ export function Header({ defaultScroll }) {
           <div className="relative flex h-16 justify-between">
             <div className="flex flex-shrink-0 items-center">
               <div className="block h-10 w-auto lg:hidden">
-                <LogoMark className="h-10 w-auto" />
+                <LogoMark className="h-10 w-auto" href="/" />
               </div>
 
               <div className="hidden h-10 w-auto lg:block">

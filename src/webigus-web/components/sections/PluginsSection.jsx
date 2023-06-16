@@ -9,6 +9,7 @@ const PluginsSection = ({ plugins }) => {
       <div
         className="mx-auto max-w-2xl px-4 pb-24 sm:px-6 lg:max-w-full lg:px-8"
         aria-labelledby="order-history-heading"
+        id="navbar-anchor"
       >
         <div className="relative mx-auto max-w-7xl px-6 sm:px-8 xl:px-0">
 
@@ -42,6 +43,7 @@ const PluginsSectionShort = ({ plugins }) => {
       <div
         className="mx-auto max-w-2xl px-4 pb-24 sm:px-6 lg:max-w-full lg:px-8"
         aria-labelledby="order-history-heading"
+        id="navbar-anchor"
       >
         <div className="relative mx-auto max-w-7xl px-6 sm:px-8 xl:px-0">
           <SectionTab

@@ -9,12 +9,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        sm: '640px',
-        'demo-sm': '720px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
-        '2xl': '1536px',
+        
       },
       animation: {
         'fade-in': 'fade-in 0.5s linear forwards',

@@ -13,6 +13,7 @@ const WebsitesSection = ({ websites }) => {
       <div
         className="mx-auto max-w-2xl px-4 pb-10 sm:px-6 lg:max-w-full lg:px-8"
         aria-labelledby="order-history-heading"
+        id="navbar-anchor"
       >
         <div className="relative mx-auto max-w-7xl px-6 sm:px-8 xl:px-0">
           <div className="mt-8 grid grid-cols-1 gap-x-2 gap-y-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -43,6 +44,7 @@ const WebsitesSectionShort = ({ websites }) => {
       <div
         className="mx-auto max-w-2xl px-4 pb-3.5 sm:px-6 lg:max-w-full lg:px-8"
         aria-labelledby="order-history-heading"
+        id="navbar-anchor"
       >
         <div className="relative mx-auto max-w-7xl px-6 sm:px-8 xl:px-0">
           <SectionTab
