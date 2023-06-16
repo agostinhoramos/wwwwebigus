@@ -100,8 +100,7 @@ const Index = ({ token }) => {
               last_name : lname,
               email : userId,
               username : userId,
-              password : password,
-              fk_location : 4
+              password : password
             });
 
             console.log(obj);

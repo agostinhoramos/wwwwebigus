@@ -17,7 +17,7 @@ class EntityUserSerializer(serializers.ModelSerializer):
         model = ENTITY_USER
         fields = [
             'last_name', 'first_name', 'photo', 'gender', 'phone', 
-            'email', 'birthday', 'username', 'auth_provider', 
+            'email', 'birthday', 'username', 'auth_provider', 'password',
             'default_lang', 'created_at', 'changed_at', 'accept_tos', 'fk_location'
         ]
         extra_kwargs = {

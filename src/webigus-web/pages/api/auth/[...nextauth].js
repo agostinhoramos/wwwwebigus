@@ -43,7 +43,6 @@ export const authOptions = {
           "first_name": given_name,
           "last_name": family_name,
           "email": email,
-          "username": email,
           "auth_provider": provider,
           "photo": picture
         });

@@ -68,7 +68,7 @@ const FloatingLabel = ({type, name, value, message, label, placeholder, classNam
                     />
                     
                     {/* PLACEHOLDER */}
-                    <label htmlFor={floatingId} className={classNames("absolute text-sm duration-300 select-none transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-transparent px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:bg-white peer-focus:-translate-y-4 left-1", placeholderStyle)}>{ placeholder }</label>
+                    <label htmlFor={floatingId} className={classNames("absolute text-sm duration-300 select-none transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-transparent px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 bg-white peer-focus:-translate-y-4 left-1", placeholderStyle)}>{ placeholder }</label>
                 </div>
 
                 {/* MESSAGE */}
