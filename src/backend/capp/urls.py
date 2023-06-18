@@ -13,4 +13,7 @@ urlpatterns = [
     path('v1/auth/login', LoginView, name="Auth Login"),
     path('v1/user/<user_context>/check', CheckIfUserExist, name="CheckIfUserExist"),
     path('v1/show/user', UserView, name="View User"),
+    path('v1/auth/logout', LogoutView, name="Auth Logout"),
+    path('v1/user/update', UpdateUserView, name="Update User"), # v1/user/update/<str:id>
+    path('v1/user/delete', DeleteUserView, name="Delete User"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

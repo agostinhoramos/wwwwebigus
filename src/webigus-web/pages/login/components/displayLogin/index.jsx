@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 
 import FloatingLabel from '@/components/elementary/FloatingLabel'
 import SmartButton from '@/components/elementary/SmartButton';
+import validator from 'validator'
+import { notification } from 'antd';
 
 const Login = ({ textUserId, setTextUserId, textPassword, setTextPassword, contextData, setDisplayView, actionEvent }) => {
 
@@ -11,9 +13,21 @@ const Login = ({ textUserId, setTextUserId, textPassword, setTextPassword, conte
 
     const [statusPassword, setStatusPassword] = useState({});
 
+    const knownMessage = {
+        wrongPassword: 'Palavra-passe errada. Tente novamente ou clique em Esqueci-me da palavra-passe para a repor.'
+    }
+
     const handleWithPasswordInput = (value) => {
         setTextPassword(value)
     }
+
+    const showNotification = ({message, description}) => {
+        notification.open({
+          message: message,
+          description: description,
+          placement: 'topRight',
+        });
+    };
 
     const handleWithLoginButton = async () => {
         const timestamp = Date.now();
@@ -26,19 +40,17 @@ const Login = ({ textUserId, setTextUserId, textPassword, setTextPassword, conte
                 textPassword: textPassword
             }
         }
-
         const response = await actionEvent(arg)
-
-        setStatusPassword({ status: null, message: null })
-        if (!response.data.success) {
-            setStatusPassword({
-                status: 'error',
-                message: 'E-mail ou palavra-passe inválidos. Tente novamente ou escolha outra opção de login.'
-            })
-            // Auto clean after 15 seconds
-            setTimeout(() => {
-                setStatusPassword({ status: null, message: null })
-            }, 1000 * 15);
+        
+        // Backend validation
+        if (response.data && response.data.error) {
+            if(response.data.error[0] === 'user_pass_wrong'){
+                setStatusPassword({
+                    status: 'error',
+                    message: knownMessage.wrongPassword
+                })
+                handleWithPasswordInput('')
+            }
         }
     }
 
@@ -89,7 +101,7 @@ const Login = ({ textUserId, setTextUserId, textPassword, setTextPassword, conte
                     <FloatingLabel
                         type="password"
                         name="password"
-                        placeholder={"Palavra-passe"}
+                        placeholder={"Introduza a Palavra-passe"}
                         value={textPassword}
                         onTextEvent={(e) => { handleWithPasswordInput(e.target.value) }}
                         status={statusPassword?.status}

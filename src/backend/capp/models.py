@@ -37,8 +37,8 @@ class ENTITY_USER(models.Model):
     first_name = models.CharField(max_length=105, null=True) #
     photo = models.CharField(max_length=255, blank=True, null=True)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICE, blank=True, null=True)
-    phone = models.CharField(max_length=100, blank=True, null=True)
-    email = models.CharField(max_length=150, unique=True)
+    phone = models.CharField(max_length=100, blank=True, null=True) # Conf KEY
+    email = models.CharField(max_length=150, blank=True, unique=True) # Conf KEY
     birthday = models.DateField(blank=True, null=True)
     username = models.CharField(max_length=150, null=True, unique=True)
     password = models.CharField(max_length=255, null=True)

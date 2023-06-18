@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react'
 
 import FloatingLabel from '@/components/elementary/FloatingLabel'
 import SmartButton from '@/components/elementary/SmartButton'
-
-import api from '@/services/api.js'
+import validator from 'validator'
+import { notification } from 'antd';
 
 const SignUp = ({ textFName, setTextFName, textLName, setTextLName, textUserId, setTextUserId, textPassword, setTextPassword, setDisplayView, actionEvent }) => {
 
@@ -16,12 +16,11 @@ const SignUp = ({ textFName, setTextFName, textLName, setTextLName, textUserId, 
     const [ statusPassword, setStatusPassword ] = useState({});
 
     // REGEX
-    const fnameRegex = /^[A-Za-z]+$/;
+    const fnameRegex = /^[A-Z][A-Za-z]*(?:\s+[A-Z][A-Za-z]*)*$/;
     const lnameRegex = /^[A-Z][A-Za-z]*(?:\s+[A-Z][A-Za-z]*)*$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^(?:\+|00)?(?:[0-9]){1,3}(?:\s?){1}([0-9]){4,14}$/;
-    
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+    const passwordRegex = /\b\w{3,}\b/;// /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
     // (?=.*[A-Z]): Pelo menos uma letra maiúscula.
     // (?=.*[a-z]): Pelo menos uma letra minúscula.
     // (?=.*\d): Pelo menos um dígito numérico.
@@ -33,13 +32,6 @@ const SignUp = ({ textFName, setTextFName, textLName, setTextLName, textUserId, 
     const [ isValidPassword, setIsValidPassword ] = useState(textPassword?true:null);
 
     const UserIdValidation = async (userId) => {
-        
-        const obj = await api.get(`user/${userId}/check`, {});
-        
-        if( obj.data?.success ){
-            return false
-        }
-
         if( 
             emailRegex.test(userId) ||
             phoneRegex.test(userId)
@@ -73,7 +65,7 @@ const SignUp = ({ textFName, setTextFName, textLName, setTextLName, textUserId, 
         if( !lnameRegex.test(value) ){
             setStatusLName({
                 status: 'error',
-                message: 'Nome incorrecto'
+                message: 'Apelido incorrecto'
             })
             setIsValidLName(false)
             return;
@@ -89,7 +81,7 @@ const SignUp = ({ textFName, setTextFName, textLName, setTextLName, textUserId, 
         if( ! await UserIdValidation(value) ){
             setStatusUserId({
                 status: 'error',
-                message: 'Nome incorrecto'
+                message: 'Email ou número de telemóvel incorrecto'
             })
             setIsValidUserId(false)
             return;
@@ -102,10 +94,11 @@ const SignUp = ({ textFName, setTextFName, textLName, setTextLName, textUserId, 
 
         setStatusPassword({status:null, message:null})
 
+        // Escolha uma palavra-passe mais segura. Experimente combinar letras, números e símbolos.
         if( !passwordRegex.test(value) ){
             setStatusPassword({
                 status: 'error',
-                message: 'Nome incorrecto'
+                message: 'Utilize uma palavra-passe com 8 carateres ou mais'
             })
             setIsValidPassword(false)
             return;
@@ -113,7 +106,7 @@ const SignUp = ({ textFName, setTextFName, textLName, setTextLName, textUserId, 
         setIsValidPassword(true)
     }
 
-    const handleWithSignUpButton = () => {
+    const handleWithSignUpButton = async () => {
         const timestamp = Date.now();
         const arg = {
             from : 'signUp',
@@ -127,7 +120,15 @@ const SignUp = ({ textFName, setTextFName, textLName, setTextLName, textUserId, 
             }
         }
         
-        const response = actionEvent(arg)
+        const response = await actionEvent(arg)
+
+        // Backend validation
+        if( response.data && response.data.error && response.data.error[0] === 'user_already_exist' ){
+            setStatusUserId({
+                status: 'error',
+                message: 'O utilizador que introduziu já existe. Tente novamente ou escolha outra opção de login'
+            })
+        }
     }
 
     useEffect(() => {

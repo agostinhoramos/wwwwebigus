@@ -10,6 +10,9 @@ import SmartButton from '@/components/elementary/SmartButton';
 import { LogoMark } from '@/components/Logo'
 import { signIn } from 'next-auth/react'
 
+import validator from 'validator'
+import { notification } from 'antd';
+
 const IsLogin = ({ textUserId, setTextUserId, actionEvent }) => {
 
     const [ enableReturn, setEnableReturn ] = useState();

@@ -1,14 +1,45 @@
 import classNames from 'classnames/bind';
 import { useState, useEffect } from 'react';
+import validator from 'validator'
+import { notification } from 'antd';
 
 import FloatingLabel from '@/components/elementary/FloatingLabel'
 import SmartButton from '@/components/elementary/SmartButton';
 
 const Recover = ({ textUserId, setTextUserId, setDisplayView, actionEvent }) => {
 
-    const [ enableReturn, setEnableReturn ] = useState();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^(?:\+|00)?(?:[0-9]){1,3}(?:\s?){1}([0-9]){4,14}$/;
 
+    const [ enableReturn, setEnableReturn ] = useState();
     const [ statusUserId, setStatusUserId ] = useState({});
+    const [ isValidUserId, setIsValidUserId ] = useState(textUserId?true:null);
+
+    const UserIdValidation = async (userId) => {
+        if( 
+            emailRegex.test(userId) ||
+            phoneRegex.test(userId)
+         ){
+            return true;
+        }
+        return false
+    }
+
+    const handleWithUserIdInput = async (value) => {
+        setTextUserId(value)
+
+        setStatusUserId({status:null, message:null})
+
+        if( ! await UserIdValidation(value) ){
+            setStatusUserId({
+                status: 'error',
+                message: 'Email ou número de telemóvel incorrecto'
+            })
+            setIsValidUserId(false)
+            return;
+        }
+        setIsValidUserId(true)
+    }
 
     const handleWithRecoverButton = async () => {
         const timestamp = Date.now();
@@ -79,6 +110,7 @@ const Recover = ({ textUserId, setTextUserId, setDisplayView, actionEvent }) => 
                         value={textUserId}
                         status={statusUserId?.status}
                         message={statusUserId?.message}
+                        onTextEvent={(e)=>{handleWithUserIdInput(e.target.value)}}
                         />
                 </div>
 

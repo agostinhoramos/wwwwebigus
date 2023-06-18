@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { Fragment, useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
+import validator from 'validator'
 
 import { AuthLayout } from '@/layouts/authLayout'
 
@@ -9,6 +10,8 @@ import IsLogin from './components/displayIsLogin'
 import Login from './components/displayLogin'
 import SignUp from './components/displaySignUp'
 import Recover from './components/displayRecover'
+
+import { notification } from 'antd';
 
 import api from '@/services/api.js'
 
@@ -35,59 +38,46 @@ const Index = ({ token }) => {
       setDisplayView(!token?null:'')
     }, []);
 
+    const showNotification = ({message, description}) => {
+      notification.open({
+        message: message,
+        description: description,
+        placement: 'topRight',
+      });
+    };
+
     useEffect(() => {
       const fetchData = async (arg) => {
-        console.log(arg);
         let obj, fname, lname, userId, password, response;
 
         switch( arg.from ){
           case 'isLogin':
-            // CODE
             userId = arg.data.textUserId;
-
-            obj = await api.get(`user/${userId}/check`, {});
-
-            if ( obj.data.success ){
-                // Login
+            response = await api.get(`user/${userId}/check`, {});
+            if ( response.data.success ){
                 setTextUserId(userId)
-
-                const data = {
-                  shortname: 'PR'
-                }
-
-                // TODO - Check remember my device feature
-                if( true ){
-                  data['image'] = 'https://flowbite.com/docs/images/people/profile-picture-5.jpg';
-                  data['name'] = 'Agostinho Ramos';
-                }
-
-                setContextData(data)
+                setContextData(response.data.data)
                 setDisplayView('login')
             }else{
-                // SignUp
                 setDisplayView('signup')
             }
-
             break;
           case 'login':
-            // CODE
             userId = arg.data.textUserId;
             password = arg.data.textPassword;
 
-            obj = await api.post(`auth/login`, {
-              email: userId,
-              password: password
-            });
+            var request = {password: password}
+            request["username"] = userId
+            if( validator.isEmail(userId) ){
+              request["email"] = userId
+            }
 
-            console.log(obj);
-
-            if ( obj.data.success ){
+            response = await api.post(`auth/login`, request);
+            if ( response.data.success ){
               router.push('/');
             }
 
-            response = obj;
-
-            return response;
+            return response
           case 'signUp':
             // CODE
             fname = arg.data.textFName;
@@ -95,21 +85,18 @@ const Index = ({ token }) => {
             userId = arg.data.textUserId;
             password = arg.data.textPassword;
 
-            obj = await api.post(`auth/register`, {
-              first_name : fname,
-              last_name : lname,
-              email : userId,
-              username : userId,
-              password : password
-            });
+            var request = {password:password,first_name:fname,last_name:lname,auth_provider:null}
+            request["username"] = userId
+            if( validator.isEmail(userId) ){
+              request["email"] = userId
+            }
 
-            console.log(obj);
-
-            if ( obj.data.success ){
+            response = await api.post(`auth/register`, request);
+            if ( response.data.success ){
               router.push('/get-started');
             }
 
-            break;
+            return response
           case 'recover':
             // CODE
             userId = arg.data.textUserId;
