@@ -57,7 +57,7 @@ def RegisterView(request):
         token = jwt.encode(payload, _env['AUTH_SECRET'],
                             algorithm='HS256')
         response.set_cookie(key='jwt', value=token, httponly=True)
-        response.data = {'success': True, 'data': serializer.data}
+        response.data = {'success': True, 'jwt': token, 'data': serializer.data}
 
         return response
     
@@ -70,6 +70,9 @@ def LoginView(request):
     username = request.data.get('username')
     email = request.data.get('email')
     password = request.data.get('password')
+    
+    current_url = request.build_absolute_uri()
+    print(f"The current URL is: {current_url}")
     
     if not (username or email) or not password:
         response['success'] = False

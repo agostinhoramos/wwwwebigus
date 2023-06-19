@@ -13,10 +13,7 @@ import { PluginsSection } from '../components/sections/PluginsSection'
 import { websites } from '@/staticdata/products/websites'
 import { plugins } from '@/staticdata/products/plugins'
 
-export default function Home() {
-  useEffect(() => {
-    console.log('Ready to show')
-  }, [])
+const Index = () => {
 
   return (
     <>
@@ -48,3 +45,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Index;

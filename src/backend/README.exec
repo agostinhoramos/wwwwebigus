@@ -6,6 +6,7 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py runserver
 python3 manage.py runserver 0.0.0.0:8000
+python3 manage.py runserver_plus --cert-file /opt/webigus/ssl/certificate.crt --key-file /opt/webigus/ssl/private.key
 
 python3 manage.py createsuperuser
 

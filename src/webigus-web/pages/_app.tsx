@@ -1,10 +1,13 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
+import { LoginProvider } from '@/context/LoginContext'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Component {...pageProps} />
+      <LoginProvider>
+        <Component {...pageProps} />
+      </LoginProvider>
     </>
   )
 }

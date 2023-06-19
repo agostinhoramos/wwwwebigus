@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import React, { Fragment, useEffect, useRef, useState } from 'react'
+import React, { Fragment, useContext, useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
 import validator from 'validator'
 
@@ -15,7 +15,11 @@ import { notification } from 'antd';
 
 import api from '@/services/api.js'
 
+import LoginContext from '@/context/LoginContext'
+
 const Index = ({ token }) => {
+
+    const { isLoggedIn, userData, login, logout } = useContext(LoginContext);
 
     const router = useRouter();
 
@@ -74,6 +78,7 @@ const Index = ({ token }) => {
 
             response = await api.post(`auth/login`, request);
             if ( response.data.success ){
+              login("new user")
               router.push('/');
             }
 

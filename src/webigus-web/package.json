@@ -27,6 +27,7 @@
     "eslint-config-next": "13.4.2",
     "focus-visible": "^5.2.0",
     "framer-motion": "^10.12.16",
+    "js-cookie": "^3.0.5",
     "next": "13.4.2",
     "next-auth": "^4.22.1",
     "postcss-focus-visible": "^6.0.4",

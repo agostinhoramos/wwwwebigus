@@ -83,7 +83,6 @@ const Login = ({ textUserId, setTextUserId, textPassword, setTextPassword, conte
                 <div className='mt-3 mb-4 text-center'>
 
                     {/* PROFILE IMAGE */}
-
                     {contextData?.image ?
                         <div className="inline-flex select-none items-center justify-center relative overflow-hidden">
                             <Image width={50} height={50} className="w-16 h-16 rounded-full" src={contextData?.image} alt={contextData?.name} />

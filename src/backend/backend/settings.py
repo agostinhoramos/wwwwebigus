@@ -53,6 +53,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'capp',
+    
+    # Dev only - https://timonweb.com/django/https-django-development-server-ssl-certificate/
+    #  pip install django-extensions Werkzeug  pyOpenSSL
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

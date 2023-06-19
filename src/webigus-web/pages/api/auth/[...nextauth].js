@@ -24,8 +24,6 @@ export const authOptions = {
   secret: process.env.AUTH_SECRET,
   callbacks: {
     async signIn(user, account, profile) {
-      //console.log(user, account, profile)
-
       const provider = user.account.provider
       const picture = user.profile.picture
       const email = user.profile.email

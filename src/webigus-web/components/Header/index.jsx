@@ -1,4 +1,4 @@
-import { Fragment, useState, useRef, useEffect } from 'react'
+import { Fragment, useContext, useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -8,15 +8,18 @@ import { Container } from '../Container'
 
 import classNames from 'classnames'
 import { Logo, LogoMark } from '@/components/Logo'
+import { Profile } from '@/components/elementary/Profile'
 import SmartButton from '@/components/elementary/SmartButton'
 
 import { names, system } from '@/staticdata'
+import LoginContext from '@/context/LoginContext'
 
 export function Header({  }) {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [showNavbar, setShowNavbar] = useState(false)
-
   const router = useRouter()
+
+  const { isLoggedIn, userData, login, logout } = useContext(LoginContext);
 
   const List = ({ text, href }) => {
     const selected = router.pathname === href ? true : false
@@ -77,13 +80,16 @@ export function Header({  }) {
               <List text={names.plugins} href="/plugins" />
             </div>
             <div className="flex flex-shrink-0 items-center">
+              { isLoggedIn?
+                <Profile name="Paulo Ritas" avatar={{url:"https://lh3.googleusercontent.com/a/AAcHTtcorXAxV96EN3wu3-D0Ej6qTdsp8Sed_LhhzBUw9Q=s96-c"}} />
+              :
               <SmartButton
                 text={system.login}
                 href="/login"
                 className={
                   'border bg-transparent text-xs  uppercase text-slate-900'
                 }
-              />
+              />}
             </div>
           </div>
         </div>
