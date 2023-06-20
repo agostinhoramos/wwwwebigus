@@ -53,10 +53,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'capp',
-    
-    # Dev only - https://timonweb.com/django/https-django-development-server-ssl-certificate/
-    #  pip install django-extensions Werkzeug  pyOpenSSL
-    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -111,6 +107,13 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = '[YOUR EMAIL THAT WILL SEND]'
+EMAIL_HOST_PASSWORD = '[YOUR EMAIL APP PASSWORD]'
+EMAIL_USE_TLS = True
 
 
 # Password validation

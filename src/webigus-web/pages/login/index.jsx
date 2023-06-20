@@ -13,15 +13,19 @@ import Recover from './components/displayRecover'
 
 import { notification } from 'antd';
 
-import api from '@/services/api.js'
+import { api } from '@/services/api.js'
 
 import LoginContext from '@/context/LoginContext'
 
 const Index = ({ token }) => {
 
-    const { isLoggedIn, userData, login, logout } = useContext(LoginContext);
+    const { isLoggedIn, userData, signup, login, logout } = useContext(LoginContext);
 
     const router = useRouter();
+
+    // Setting up default user for test
+    const USER_ID = "1012444@sal.ipg.pt"
+    const USER_PW = "123"
 
     const [ displayView, setDisplayView ] = useState('')
     const [ actionEvent, setActionEvent ] = useState('')
@@ -29,8 +33,8 @@ const Index = ({ token }) => {
 
     const [ textFName, setTextFName ] = useState(null);
     const [ textLName, setTextLName ] = useState(null);
-    const [ textUserId, setTextUserId ] = useState(null);
-    const [ textPassword, setTextPassword ] = useState(null);
+    const [ textUserId, setTextUserId ] = useState(USER_ID);
+    const [ textPassword, setTextPassword ] = useState(USER_PW);
 
     useEffect(() => {
       if (token) {
@@ -70,17 +74,15 @@ const Index = ({ token }) => {
             userId = arg.data.textUserId;
             password = arg.data.textPassword;
 
-            var request = {password: password}
-            request["username"] = userId
+            var parameter = {
+              password:password
+            }
+            parameter["username"] = userId
             if( validator.isEmail(userId) ){
-              request["email"] = userId
+              parameter["email"] = userId
             }
 
-            response = await api.post(`auth/login`, request);
-            if ( response.data.success ){
-              login("new user")
-              router.push('/');
-            }
+            response = login(parameter)
 
             return response
           case 'signUp':
@@ -90,16 +92,18 @@ const Index = ({ token }) => {
             userId = arg.data.textUserId;
             password = arg.data.textPassword;
 
-            var request = {password:password,first_name:fname,last_name:lname,auth_provider:null}
-            request["username"] = userId
+            var parameter = {
+              password:password,
+              first_name:fname,
+              last_name:lname,
+              auth_provider:null
+            }
+            parameter["username"] = userId
             if( validator.isEmail(userId) ){
-              request["email"] = userId
+              parameter["email"] = userId
             }
 
-            response = await api.post(`auth/register`, request);
-            if ( response.data.success ){
-              router.push('/get-started');
-            }
+            response = signup(parameter)
 
             return response
           case 'recover':

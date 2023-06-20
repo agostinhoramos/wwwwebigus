@@ -11,6 +11,7 @@ from capp.views import *
 urlpatterns = [
     path('v1/auth/register', RegisterView, name="Auth Register"),
     path('v1/auth/login', LoginView, name="Auth Login"),
+    path('v1/auth/token', AuthTokenView, name="Auth Token"),
     path('v1/user/<user_context>/check', CheckIfUserExist, name="CheckIfUserExist"),
     path('v1/show/user', UserView, name="View User"),
     path('v1/auth/logout', LogoutView, name="Auth Logout"),

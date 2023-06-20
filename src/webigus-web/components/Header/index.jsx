@@ -14,7 +14,7 @@ import SmartButton from '@/components/elementary/SmartButton'
 import { names, system } from '@/staticdata'
 import LoginContext from '@/context/LoginContext'
 
-export function Header({  }) {
+export function Header({ }) {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [showNavbar, setShowNavbar] = useState(false)
   const router = useRouter()
@@ -39,18 +39,16 @@ export function Header({  }) {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
-
       const anchorPosition = document.getElementById('navbar-anchor')?.offsetTop;
-      if(currentScrollPos > anchorPosition){
+      if (currentScrollPos > anchorPosition) {
         if (prevScrollPos < currentScrollPos) {
           setShowNavbar(true); // Scrolling up
-        }else{
+        } else {
           setShowNavbar(false); // Scrolling down
         }
       } else {
         setShowNavbar(false); // Scrolling down
       }
-
       setPrevScrollPos(currentScrollPos);
     };
 
@@ -62,6 +60,18 @@ export function Header({  }) {
   }, [prevScrollPos]);
 
   const Nav = ({ className, ...props }) => {
+
+
+    const userNavigation = [
+      { name: 'Your Profile' },
+      { name: 'Settings' },
+      { name: 'Sign out' },
+    ]
+
+    const handleWithListMenuClick = (index) => {
+      index === 2 ? logout() : null
+    }
+
     return (
       <>
         <div className={classNames("mx-auto uppercase px-2 sm:px-6 lg:px-8", className)} {...props} >
@@ -80,16 +90,21 @@ export function Header({  }) {
               <List text={names.plugins} href="/plugins" />
             </div>
             <div className="flex flex-shrink-0 items-center">
-              { isLoggedIn?
-                <Profile name="Paulo Ritas" avatar={{url:"https://lh3.googleusercontent.com/a/AAcHTtcorXAxV96EN3wu3-D0Ej6qTdsp8Sed_LhhzBUw9Q=s96-c"}} />
-              :
-              <SmartButton
-                text={system.login}
-                href="/login"
-                className={
-                  'border bg-transparent text-xs  uppercase text-slate-900'
-                }
-              />}
+              {isLoggedIn ?
+                <Profile
+                  name={`${userData?.first_name} ${userData?.last_name}`}
+                  avatar={userData?.photo?{url:userData.photo}:null}
+                  userNavigation={userNavigation}
+                  handleWithListMenuClick={handleWithListMenuClick}
+                />
+                :
+                <SmartButton
+                  text={system.login}
+                  href="/login"
+                  className={
+                    'border bg-transparent text-xs  uppercase text-slate-900'
+                  }
+                />}
             </div>
           </div>
         </div>
@@ -108,7 +123,7 @@ export function Header({  }) {
   return (
     <>
       <Container className={"max-w-[88rem]"} >
-        <Nav  className={`relative border rounded-full mt-5 mx-5 z-40 ${showNavbar ? "invisible":"" }`} />
+        <Nav className={`relative border rounded-full mt-5 mx-5 z-40 ${showNavbar ? "invisible" : ""}`} />
       </Container>
       <div
         style={{
@@ -119,14 +134,14 @@ export function Header({  }) {
         }}
         className={classNames(
           "transition-all top-0 bg-red-500 h-5 duration-300 ease-in-out fixed max-w-7xl z-40 mx-auto hidden sm:block sm:left-0 sm:right-0",
-          `opacity-${showNavbar ? 100 : 0} ${showNavbar ? 'translate-y-0':'-translate-y-full'}`
+          `opacity-${showNavbar ? 100 : 0} ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`
         )}
-        ></div>
+      ></div>
       <motion.nav
         style={navStyle}
         className={classNames(
           "transition-all border rounded-full top-1 sm:top-4 duration-300 ease-in-out fixed max-w-[85rem] z-40 mx-auto left-2 right-2 sm:left-0 sm:right-0",
-          `opacity-${showNavbar ? 100 : 0} ${showNavbar ? 'translate-y-0':'-translate-y-full'}`
+          `opacity-${showNavbar ? 100 : 0} ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`
         )}
       >
         <Nav />

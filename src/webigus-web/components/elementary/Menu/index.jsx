@@ -1,16 +1,12 @@
-import { Fragment, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import classNames from 'classnames'
 
-const Menu = ({ userNavigation, children, className, ...props }) => {
+const Menu = ({ userNavigation, handleWithListMenuClick, children, className, ...props }) => {
 
     const [show, setShow] = useState(false)
 
     const handleWithShow = () => {
         setShow(!show)
-    }
-
-    const handleWithListMenuClick = (index) => {
-        console.log("DRRR", index)
     }
 
     return (

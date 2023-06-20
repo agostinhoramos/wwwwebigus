@@ -3,8 +3,7 @@ import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import FacebookProvider from "next-auth/providers/facebook";
 import AppleProvider from "next-auth/providers/apple";
-
-import api from '@/services/api.js'
+import { frontendApi } from '@/services/api.js'
 
 export const authOptions = {
   providers: [
@@ -23,6 +22,7 @@ export const authOptions = {
   ],
   secret: process.env.AUTH_SECRET,
   callbacks: {
+
     async signIn(user, account, profile) {
       const provider = user.account.provider
       const picture = user.profile.picture
@@ -33,26 +33,6 @@ export const authOptions = {
       const family_name = user.profile.family_name
 
       if( !email_verified ){
-        return "/login"
-      }
-
-      try {
-        const obj = await api.post(`auth/register`, {
-          "first_name": given_name,
-          "last_name": family_name,
-          "email": email,
-          "auth_provider": provider,
-          "photo": picture
-        });
-
-        if (obj.data && obj.data.error && obj.data.error[0] === 'user_already_exist') {
-          return "/login";
-        } else {
-          console.log("Registration successful");
-        }
-
-      } catch (error) {
-        console.error("Error occurred:", error);
         return "/login"
       }
       

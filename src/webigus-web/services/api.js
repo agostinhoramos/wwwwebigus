@@ -6,4 +6,8 @@ const api = axios.create({
     baseURL: 'https://webigus.com/_api/v1/'
 });
 
-export default api;
+const frontendApi = axios.create({
+    baseURL: 'https://webigus.com/'
+});
+
+export { api, frontendApi };
